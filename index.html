@@ -17,8 +17,7 @@
 				packages: { '[+]': ['tagFormat'] },
 				tags: 'all',
 				tagFormat: {
-					number: (n) => n > 16 ? 'A-' + (n - 16) : n,
-//					tag: (n) => '(' + n + ')'
+					number: (n) => n > MathJax.sep ? 'A-' + (n - MathJax.sep) : n,
 				}
 			},
 			chtml: {
