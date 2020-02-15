@@ -8,16 +8,16 @@
 	<script src="//polyfill.io/v3/polyfill.min.js?features=es6"></script>
 	<script>
 		window.MathJax = {
-			loader: {
-				load: ['[tex]/tagFormat']
-			},
-			sep: 16, // the number of equations before the appendix.
+//			loader: {
+//				load: ['[tex]/tagFormat']
+//			},
+//			sep: 16, // the number of equations before the appendix.
 			tex: {
-				packages: { '[+]': ['tagFormat'] },
+//				packages: { '[+]': ['tagFormat'] },
 				tags: 'all',
-				tagFormat: {
-					number: (n) => n > MathJax.sep ? 'A-' + (n - MathJax.sep) : n,
-				}
+//				tagFormat: {
+//					number: (n) => n > MathJax.sep ? 'A-' + (n - MathJax.sep) : n,
+//				}
 			},
 			chtml: {
 				scale: 0.9
