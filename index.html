@@ -6,7 +6,6 @@
 	<title>Yule過程とSimon過程</title>
 	<script src="//d3js.org/d3.v4.min.js"></script>
 	<script src="//polyfill.io/v3/polyfill.min.js?features=es6"></script>
-
 	<script>
 		window.MathJax = {
 			loader: {
@@ -26,11 +25,9 @@
 		};
 	</script>
 	<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
-
 	<script src="//dencity.jp/js/bibliography.js"></script>
 	<script src="//dencity.jp/js/footnote.js"></script>
 	<link href="//fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-
 	<style>
 		html,
 		button,
@@ -140,14 +137,12 @@
 			content: "A"counter(apsection) ". ";
 		}
 	</style>
-
 </head>
 
 <body>
 	<div class="content">
 		<h1 class="title">Yule過程とSimon過程</h1>
 		<h1 class="author">橋本康弘</h1>
-
 		<h2 class="nonum">目次</h2>
 		<div id="index">
 			<ol>
@@ -262,9 +257,7 @@
 			外形的に大きな違いは両者のサイズ分布に見られるベキ指数の違いである。この違いは修正Yule過程で成立した式(\ref{eq:yule-simon_relationship})が、通常のYule過程では
 
 			\begin{equation}
-
 			\frac{\alpha'}{1-\alpha'}=\frac{gN_g}{sN_s},\quad\mbox{or}\quad\alpha'=\frac{gN_g}{gN_g+sN_s}
-
 			\label{eq:novelty_rate_in_yule_process}
 			\end{equation}
 
@@ -281,9 +274,7 @@
 				id="yule-simon_process"></a>    Yule-Simon過程」と呼ぶことにする。いま、単語の系列の長さ\(N\)のときの単語\(i\)の出現数を\(n_i\)とおくと、修正Yule過程では単語\(i\)が次に選び出される確率\(P_i(N)\)は
 
 			\begin{equation}
-
 			P_i(N)=(1-\alpha)\cdot\frac{n_ik(n_i,N)}{N}\cdot\frac{n_i}{n_ik(n_i,N)}\quad\biggl[=(1-\alpha)\frac{n_i}{N}\biggr]
-
 			\label{eq:probability_of_word_selection}
 			\end{equation}
 			と書ける。右辺の第一項はnovelty
@@ -304,6 +295,7 @@
 			p(k)\propto k^{-3}
 			\label{eq:solution_of_ba_graph}
 			\end{equation}
+
 			となることを示した。導出の詳細は<a
 				href="#appendix-solution_of_ba_graph">Appendix</a>を参照。このモデルはインターネットやウェブの成長メカニズムを議論するために導入され、次数分布に見られるベキ則（スケールフリー性）が大きな関心を集めたことから「スケールフリーグラフ」とも呼ばれた。ノードが次数に比例してエッジを獲得していく過程は"Preferential
 			Attachment"と呼ばれ、しばしば"The Rich Get Richer"といったレトリックで語られる。</div>
@@ -323,9 +315,11 @@
 
 			\begin{equation}
 			\Delta n_i(N)=n_i(N+\Delta N)-n_i(N)=(1-\alpha)\frac{n_i(N)}{N}\Delta N
+			\label{eq:}
 			\end{equation}
 
 			という単語の出現数の時間発展式が立てられる。これを解くと
+
 			\begin{equation}
 			n_i(N)=\left(\frac{N}{N_i}\right)^{1-\alpha}
 			\label{eq:growth_of_vocabulary}
@@ -341,9 +335,10 @@
 			N_i)=\lambda^{1-\alpha}\)の\(x\)倍になる確率密度は、\(\alpha\rightarrow 0\), \(\lambda\rightarrow \infty\)の極限で
 
 			\begin{equation}
-
 			p(x)\propto \exp(-x)
+			\label{eq:}
 			\end{equation}
+
 			となる。導出の詳細は文献<a class="cite-Hashimoto2016">ref</a>またはその<a
 				href="/misc/growth_fluctuation_in_preferential_attachment_dynamics/">要約</a>を参照。つまり、ゆらぎの大きさは指数関数的に減衰し、期待値(\ref{eq:growth_of_vocabulary})からオーダーが外れるようなゆらぎはほとんど存在しないことが分かる。
 		</div>
@@ -359,11 +354,10 @@
 			と表される。\(N\)は書かれた単語の数、\(K(N)\)は\(N\)個の単語が書かれるまでに出現した単語の種類の数である。一般に\(\beta\)は1より小さい定数になることが知られており、これはSub-Linear則とも呼ばれている。ここではHeaps則とZipf則の関係、そしてSimon過程との関わりについて明らかにする。
 		</div>
 		<div class="p">まず、Zipf則を
+
 			\begin{equation}
 			n_r=A r^{-\theta},\qquad A=N/\sum_{r=1}^Kr^{-\theta}
-
 			\label{eq:zipf_law}
-
 			\end{equation}
 
 			と表記する。\(K\)は語彙サイズ、\(r\)は単語を出現頻度の降順で並べた時のランク（ランク1が最頻出単語、ランク\(K\)が最希少単語）、\(n_r\)はランク\(r\)の単語の出現数、\(A\)は規格化定数、\(\theta\)はベキ指数である。Baeza-Yatesらは現象論的な考察によりHeaps則とZipf則の2つのベキ指数は逆数の関係にあることを示した<a
@@ -380,12 +374,15 @@
 
 			\begin{equation}
 			\theta(N)=\frac{K(N)}{\alpha(N)N}\bigl(1-\alpha(N)\bigr)
+			\label{eq:}
 			\end{equation}
+
 			となる。導出の詳細は<a
 				href="#appendix-solution_of_simon_process_with_time-decaying_novelty_rate">Appendix</a>を参照。これに式(\ref{eq:heaps_law})と\(\alpha(N)=dK(N)/dN\)を代入すると、
 
 			\begin{equation}
 			\theta(N)=\frac{1-\alpha(N)}{\beta},\qquad\alpha(N)\propto N^{\beta-1}
+			\label{eq:}
 			\end{equation}
 
 			が得られる。つまり、Sub-Linear則の下で十分大きな\(N\)については\(\alpha(N)\ll 1\)となり、\(\theta(N)\sim
@@ -394,6 +391,7 @@
 		<h3 id="appendix">Appendix</h3>
 		<h2 id="appendix-solution_of_yule_process" class="appdx">Yule過程の解の導出（簡略版）<a class="cite-Simkin2011">ref</a></h2>
 		<div class="p">簡略版では時間に加えて種数を連続変数とみなす。時刻\(t\)における属の総数の期待値\(\langle N_g(t)\rangle\)は
+
 			\begin{equation}
 			\langle
 			N_g(t)\rangle=\exp(gt)
@@ -405,68 +403,69 @@
 			\begin{equation}
 			P_g(\tau'\lt\tau)=1-\frac{\langle N_g(T-\tau)\rangle}{\langle
 			N_g(T)\rangle}=1-\frac{\exp\bigl(g(T-\tau)\bigr)}{\exp(gT)}=1-\exp(-g\tau)
+			\label{eq:}
 			\end{equation}
 
 			となる（\(T\)に依存しない）。したがって、年齢\(\tau\)の属の確率密度は
+
 			\begin{equation}
-
 			p(\tau)=\frac{dP_g(t\lt\tau)}{d\tau}=g\exp(-g\tau)
-
 			\label{eq:age_distribution_of_genera}
 			\end{equation}
+
 			となる。一方、年齢\(\tau\)の属に含まれる種数を\(n(\tau)\)とおくと、
 
 			\begin{equation}
-
 			\frac{dn(\tau)}{d\tau}=sn(\tau),\qquad n(0)=1
+			\label{eq:}
 			\end{equation}
+
 			より
+
 			\begin{equation}
 			n(\tau)=\exp(s\tau)
-
 			\label{eq:number_of_species_in_age-tau-genera}
 			\end{equation}
 
 			を得る。\(\tau\)と\(n\)が互いに一価関数の関係にあると仮定すると、式(\ref{eq:number_of_species_in_age-tau-genera})を変形して
-			\begin{equation}
 
+			\begin{equation}
 			\tau=\frac{1}{s}\ln(n)
 			\label{eq:tau-ns_relationship}
 			\end{equation}
+
 			が得られ、また
 			\begin{equation}
-
 			p(\tau)d\tau=p(n)dn
-
 			\label{eq:probability_of_age-tau_genera}
 			\end{equation}
 
 			が成り立つ。式(\ref{eq:tau-ns_relationship})を式(\ref{eq:age_distribution_of_genera})に代入すると
-			\begin{equation}
 
+			\begin{equation}
 			p(\tau)=g\exp\left(-g\cdot\frac{1}{s}\ln(n)\right)=gn^{-g/s}.
 			\label{eq:age_distribution_of_genera2}
-
 			\end{equation}
 
 			また式(\ref{eq:tau-ns_relationship})より
+
 			\begin{equation}
 			\frac{d\tau}{dn}=\frac{1}{sn}.
-
 			\label{eq:tau-ns_derivative}
-
 			\end{equation}
 
 			式(\ref{eq:probability_of_age-tau_genera})(\ref{eq:age_distribution_of_genera2})(\ref{eq:tau-ns_derivative})より
 
 			\begin{equation}
-
 			p(n)=p(\tau)\frac{d\tau}{dn}=\frac{gn^{-g/s}}{sn}=\frac{g}{s}n^{-\left(1+\frac{g}{s}\right)}.
-
+			\label{eq:}
 			\end{equation}
+
 			したがって
+
 			\begin{equation}
 			p(n)=(\rho-1)n^{-\rho},\qquad\rho=1+\frac{g}{s}
+			\label{eq:}
 			\end{equation}
 
 			となり、式(\ref{eq:yule_distribution})が導かれる。</div>
@@ -474,112 +473,156 @@
 				class="cite-Simkin2011">ref</a><a class="cite-Bacaer2011">ref</a></h2>
 		<div class="p">厳密版では簡略版で追加した種数の連続性などの仮定を用いない導出を行う。年齢\(\tau\)の属が種数1である確率、つまり一度もspecific
 			mutationが発生しない確率を\(q_1(\tau)\)とおくと、ポアソン分布より
+
 			\begin{equation}
-
 			q_1(\tau)=\frac{(s\tau)^0\exp(-s\tau)}{0!}=\exp(-s\tau)
-
+			\label{eq:}
 			\end{equation}
-			となる。同様に、年齢\(\tau\)の属が種数2である確率を\(q_2(\tau)\)とおくと、 \begin{align}
+
+			となる。同様に、年齢\(\tau\)の属が種数2である確率を\(q_2(\tau)\)とおくと、
+
+			\begin{align}
 			q_2(\tau)&amp;=\int_0^{\tau}d\tau_1\left[\exp(-s\tau_1)s\exp\bigl(-s(\tau-\tau_1)\bigr)\exp\bigl(-s(\tau-\tau_1)\bigr)\right]\nonumber\\
-			&amp;=\exp(-s\tau)\bigl(1-\exp(-s\tau)\bigr) \end{align}
+			&amp;=\exp(-s\tau)\bigl(1-\exp(-s\tau)\bigr)
+			\label{eq:}
+			\end{align}
+
 			となる。これは年齢\(0\)から\(\tau\)のどこかの点\(\tau_1\)で1度だけspecific
 			mutationが発生する確率を意味する。つまり <ol>
 				<li>\(\tau_1\)まで変異が発生しない確率：\(\exp(-s\tau_1)\)</li>
 				<li>\(\tau_1\)で2つに増えた種がそれぞれ\(\tau\)まで変異が発生しない確率：\(\exp\bigl(-s(\tau-\tau_1)\bigr)\)</li>
 				<li>微小区間で変異が1回発生する確率：\(sd\tau_1\)</li>
 			</ol> の積について、可能な\(\tau_1\)の範囲で積分した値である。同様の考え方で種数\(n\)についても
-			\begin{equation}
 
+			\begin{equation}
 			q_n(\tau)=\exp(-s\tau)\bigl(1-\exp(-s\tau)\bigr)^{n-1}
 			\label{eq:q_n}
 			\end{equation}
 
 			と求まる。年齢\(\tau\)の属の存在確率が式(\ref{eq:age_distribution_of_genera})で与えられることを使えば、種数\(n\)を持つ属の存在確率は式(\ref{eq:q_n})を式(\ref{eq:age_distribution_of_genera})で重み付け積分することで
-			\begin{align} p(n)&amp;=\int_0^{\infty}p(\tau)q_n(\tau)d\tau\nonumber\\
+
+			\begin{align}
+			p(n)&amp;=\int_0^{\infty}p(\tau)q_n(\tau)d\tau\nonumber\\
 			&amp;=\int_0^{\infty}g\exp\bigl(-(g+s)\tau\bigr)\bigl(1-\exp(-s\tau)\bigr)^{n-1}d\tau
 			\label{eq:p_n}
 			\end{align}
+
 			と求まる。この式を展開していくと階乗が現れ、Stirlingの近似を用いることでベキ関数の式(\ref{eq:yule_distribution})が導かれる。Simkinらの簡明な方法とBacaërの丁寧な方法の2つを紹介する。
 		</div>
 		<h3>Simkinらの方法<a class="cite-Simkin2011">ref</a></h3>
-		<div class="p">変数変換 \(x=\exp(-s\tau)\) によって積分範囲が0～1に変わり、\(dx/d\tau=-sx\)より \begin{align}
+		<div class="p">変数変換 \(x=\exp(-s\tau)\) によって積分範囲が0～1に変わり、\(dx/d\tau=-sx\)より
+
+			\begin{align}
 			p(n)&amp;=\int_0^1gx^{\frac{g+s}{s}}(1-x)^{n-1}\frac{dx}{sx}\nonumber\\
-			&amp;=\frac{g}{s}\int_0^1x^{\frac{g}{s}}(1-x)^{n-1}dx \end{align} となる。これはそのままベータ関数の形をしているので \begin{align}
+			&amp;=\frac{g}{s}\int_0^1x^{\frac{g}{s}}(1-x)^{n-1}dx
+			\label{eq:}
+			\end{align}
+
+			となる。これはそのままベータ関数の形をしているので
+
+			\begin{align}
 			p(n)&amp;=\frac{g}{s}\ \mathrm{B}\left(1+\frac{g}{s}, n\right)\nonumber\\ &amp;=\frac{g}{s}\
-			\frac{\Gamma(n)\
-			\Gamma\left(1+\frac{g}{s}\right)}{\Gamma\left(n+1+\frac{g}{s}\right)} \end{align}
+			\frac{\Gamma(n)\ \Gamma\left(1+\frac{g}{s}\right)}{\Gamma\left(n+1+\frac{g}{s}\right)}
+			\label{eq:}
+			\end{align}
+
 			を得る。以下、式(\ref{eq:stirling})以降を参照。
 		</div>
 		<h3>Bacaërの方法<a class="cite-Bacaer2011">ref</a></h3>
-		<div class="p">部分積分によって \begin{align}
+		<div class="p">部分積分によって
+
+			\begin{align}
 			p(n)&amp;=\left[-\frac{g}{g+s}\exp\bigl(-(g+s)\tau\bigr)\bigl(1-\exp(-s\tau)\bigr)^{n-1}\right]_0^{\infty}\quad\mbox{(This
-			term disappears.)}\nonumber\\ &amp;\quad
+			term disappears.)}\nonumber\\
+			&amp;\quad
 			-\int_0^{\infty}d\tau\left[-\frac{g}{g+s}\exp\bigl(-(g+s)\tau\bigr)(n-1)\bigl(1-\exp(-s\tau)\bigr)^{n-2}s\exp(-s\tau)\right]\nonumber\\
 			&amp;=\frac{(n-1)s}{g+s}\int_0^{\infty}d\tau\Bigl[g\exp\bigl(-(g+2s)\tau\bigr)\bigl(1-\exp(-s\tau)\bigr)^{n-2}\Bigr]
+			\label{eq:p_n_exp}
+			\end{align}
 
-			\label{eq:p_n_exp} \end{align} を得る。また、式(\ref{eq:p_n})を \begin{align}
+			を得る。また、式(\ref{eq:p_n})を
+
+			\begin{align}
 			p(n)&amp;=\int_0^{\infty}d\tau\Bigl[g\exp\bigl(-(g+s)\tau\bigr)\bigl(1-\exp(-s\tau)\bigr)^{n-2}\bigl(1-\exp(-s\tau)\bigr)\Bigr]\nonumber\\
 			&amp;=\int_0^{\infty}d\tau\Bigl[g\exp\bigl(-(g+s)\tau\bigr)\bigl(1-\exp(-s\tau)\bigr)^{n-2}\Bigr]-\int_0^{\infty}d\tau\Bigl[g\exp\bigl(-(g+2s)\tau\bigr)\bigl(1-\exp(-s\tau)\bigr)^{n-2}\Bigr]
-			\end{align} と変形すると、右辺第1項はそのまま\(p(n-1)\)、右辺第2項は式(\ref{eq:p_n_exp})の積分部分と等しいことが分かる。これを利用すると、
-			\begin{equation}
+			\label{eq:}
+			\end{align}
 
+			と変形すると、右辺第1項はそのまま\(p(n-1)\)、右辺第2項は式(\ref{eq:p_n_exp})の積分部分と等しいことが分かる。これを利用すると、
+
+			\begin{equation}
 			p(n)=p(n-1)-p(n)\frac{g+s}{(n-1)s}
+			\label{eq:}
 			\end{equation}
+
 			となり、
+
 			\begin{equation}
 			p(n)=\frac{(n-1)s}{g+ns}p(n-1)
-
+			\label{eq:}
 			\end{equation}
+
 			を得る。\(p(1)=g/(g+s)\)を用いれば、
+
 			\begin{equation}
-
 			p(n)=\frac{g}{g+s}\cdot\frac{s}{g+2s}\cdot\frac{2s}{g+3s}\cdot\frac{3s}{g+4s}\cdots\frac{(n-1)s}{g+ns}
-
 			\label{eq:yule-solution}
 			\end{equation}
 
 			を得る。この式は、\(n\)が大きくなるにつれて乗算される係数が1に近づいていくため、確率の減衰が遅くなる、つまり確率分布のテールが伸びることを示唆している。</div>
-		<div class="p">\(u=g/s\)とおき、式(\ref{eq:yule-solution})をさらに変形すると、 \begin{align}
+		<div class="p">\(u=g/s\)とおき、式(\ref{eq:yule-solution})をさらに変形すると、
+
+			\begin{align}
 			p(n)&amp;=\frac{u}{1+u}\cdot\frac{1}{2+u}\cdot\frac{2}{3+u}\cdot\frac{3}{4+u}\cdots\frac{n-1}{n+u}\nonumber\\[6pt]
 			&amp;=\frac{u\ \Gamma(n)\ \Gamma(1+u)}{\Gamma(n+1+u)}
-			\label{eq:yule:bacaer-solution-Gamma} \end{align}
+			\label{eq:yule:bacaer-solution-Gamma}
+			\end{align}
+
 			となり、Simkinらの方法と同様の結果を得る。最後に大きな\(n\)におけるStirlingの近似
+
 			\begin{equation}
-			\ln\Gamma(n)\simeq
-			n\ln(n)-n+\frac{1}{2}\ln(2\pi
-			n)
+			\ln\Gamma(n)\simeq n\ln(n)-n+\frac{1}{2}\ln(2\pi n)
 			\label{eq:stirling}
 			\end{equation}
+
 			を用いれば
+
 			\begin{equation}
-
 			\ln\bigl(p(n)\bigr)\simeq-(1+u)\ln(n)+\mbox{constant}.
-
+			\label{eq:}
 			\end{equation}
+
 			\(u\)を戻すと
+
 			\begin{equation}
 			p(n)\propto n^{-\rho},\qquad\rho=1+\frac{g}{s}
+			\label{eq:}
 			\end{equation}
+
 			を得る。
 		</div>
 		<h2 id="appendix-solution_of_simon_process" class="appdx">Simon過程の解の導出<a class="cite-Simon1955">ref</a><a
 				class="cite-Simkin2011">ref</a></h2>
-		<div class="p">ここでは\(k(n,N)\)を\(N\)個の単語が書かれた時点におけるクラス\([n]\)の語彙サイズの期待値とみなす。すると語彙サイズに関する時間発展式は \begin{align}
+		<div class="p">ここでは\(k(n,N)\)を\(N\)個の単語が書かれた時点におけるクラス\([n]\)の語彙サイズの期待値とみなす。すると語彙サイズに関する時間発展式は
+
+			\begin{align}
 			k(n,N+1)-k(n,N)&amp;=(1-\alpha)\left\{\frac{(n-1)k(n-1,N)}{N}-\frac{nk(n,N)}{N}\right\}\qquad (n\geq 2),
+			\label{eq:simon:rate_equation_of_class-n}\\
+			k(1,N+1)-k(1,N)&amp;=\alpha-(1-\alpha)\frac{k(1,N)}{N}
+			\label{eq:simon:rate_equation_of_class-1}
+			\end{align}
 
-			\label{eq:simon:rate_equation_of_class-n}\\ k(1,N+1)-k(1,N)&amp;=\alpha-(1-\alpha)\frac{k(1,N)}{N}
-
-			\label{eq:simon:rate_equation_of_class-1} \end{align}
 			というマスター方程式の形で書ける。両式の左辺はそれぞれ\(N+1\)番目の単語が書かれたときのクラス\([n]\)およびクラス\([1]\)の語彙の増加量の期待値を表す。また、\(nk(n,N)\)はクラス\([n]\)の語彙の総出現数であるから、既存語彙の中からクラス\([n]\)の語彙が選択される相対確率は\(nk(n,N)/N\)である。したがって、式(\ref{eq:simon:rate_equation_of_class-n})の右辺第一項はクラス\([n-1]\)の語彙が選択されクラス\([n]\)に移動することによるクラス\([n]\)の増加量、第二項はクラス\([n]\)の語彙が選択されクラス\([n+1]\)に移動することによるクラス\([n]\)の減少量を表す。式(\ref{eq:simon:rate_equation_of_class-1})の右辺第一項はクラス\([1]\)の増加が新しい語彙の生成（確率\(\alpha\)）によってのみ生じることを意味する。
 		</div>
 		<div class="p">いま、すべての語彙の中でクラス\([n]\)の語彙の割合を\(p(n,N)\)とおくと、
+
 			\begin{equation}
 			p(n,N)=\frac{k(n,N)}{\alpha N}
-
 			\label{eq:simon:probability_of_class-n}
 			\end{equation}
 
 			と書ける。右辺の分母は語彙のサイズである。系が定常状態、つまり新しい単語が書かれてもクラスに属する語彙の割合が変わらない状態に達していると仮定すると、
+
 			\begin{equation}
 			p(n)\equiv
 			p(n,N+1)=p(n,N)
@@ -587,19 +630,25 @@
 			\end{equation}
 
 			が成り立つ。式(\ref{eq:simon:probability_of_class-n})(\ref{eq:simon:stationary_state})を式(\ref{eq:simon:rate_equation_of_class-n})(\ref{eq:simon:rate_equation_of_class-1})に代入することで
-			\begin{align} p(n)&amp;=\frac{(1-\alpha)(n-1)}{1+(1-\alpha)n}p(n-1)\qquad (n\geq 2),\\
+
+			\begin{align}
+			p(n)&amp;=\frac{(1-\alpha)(n-1)}{1+(1-\alpha)n}p(n-1)\qquad (n\geq 2),\\
 			p(1)&amp;=\frac{1}{2-\alpha}
-			\end{align} を得る。簡単のため\(u=1/(1-\alpha)\)とおくと、 \begin{align}
+			\label{eq:}
+			\end{align}
+
+			を得る。簡単のため\(u=1/(1-\alpha)\)とおくと、
+
+			\begin{align}
 			p(n)&amp;=\frac{1}{1+(1-\alpha)}\cdot\frac{1-\alpha}{1+2(1-\alpha)}\cdot\frac{2(1-\alpha)}{1+3(1-\alpha)}\cdot\frac{3(1-\alpha)}{1+4(1-\alpha)}\cdots\frac{(1-\alpha)(n-1)}{1+n(1-\alpha)}\\[6pt]
 			&amp;=\frac{u}{1+u}\cdot\frac{1}{2+u}\cdot\frac{2}{3+u}\cdot\frac{3}{4+u}\cdots\frac{n-1}{n+u}
-
 			\label{eq:simon:solution}\\[6pt] &amp;=\frac{u\ \Gamma(n)\Gamma(1+u)}{\Gamma(n+1+u)}
+			\label{eq:simon:solution-gamma}\\
+			\end{align}
 
-			\label{eq:simon:solution-gamma}\\ \end{align}
 			となり、Yule過程の解の導出で出現した式(\ref{eq:yule:bacaer-solution-Gamma})と同じ形の解を得る。\(u\)を戻して大きな\(n\)の漸近近似を用いることで
 
 			\begin{equation}
-
 			p(n)\propto n^{-\gamma},\qquad\gamma=1+\frac{1}{1-\alpha}
 			\label{eq:simon:solution-approx}
 			\end{equation}
@@ -609,30 +658,37 @@
 				class="cite-Simkin2011">ref</a>
 		</h2>
 		<div class="p">Simon過程における\(\alpha\)がYule過程の2つのmutation rateを用いてどのように表されるかについてもう少し細かく見てみると、
-			\begin{equation}
 
+			\begin{equation}
 			\alpha'\simeq\left\{ \begin{array}{ll} 1-\frac{s}{g}&amp;\qquad (g\gt s),\\
 			\frac{g(s-g)}{s^2}\exp\bigl(-(s-g)t\bigr)&amp;\qquad (g\lt s)
-
 			\label{eq:solution_of_simons_alpha_in_yule_process}
 			\end{array} \right.
 			\end{equation}
+
 			という関係が導かれる。\(g\gt s\)の場合に\(\alpha'\)は定数、\(g\lt
 			s\)の場合には時間とともに0に漸近していく。導出は以下：
 		</div>
 		<div class="p">Yule過程において、時刻\(t\)での種数の期待値\(\langle N_s(t)\rangle\)は
+
 			\begin{equation}
 			\langle
 			N_s(t)\rangle=\int_0^tg\langle N_g(t_1)\rangle\exp\bigl(s(t-t_1)\bigr)dt_1+\exp(st)
+			\label{eq:}
 			\end{equation}
 
 			と表せる。右辺第1項の積分について、\(g\langle
 			N_g(t_1)\rangle\)は時刻\(t_1\)に新たに生成される属数、\(\exp\bigl(s(t-t_1)\bigr)\)はその新しい属が時刻\(t\)までに生み出す種数を表す。したがって、\(t_1\)を可能な範囲で積分した値が、時刻\(t\)までに生成された属が生み出す種数の総数になる。右辺第2項は最初の属が時刻\(t\)までに生み出した種数である。これを部分積分で解くと、
-			\begin{align} \langle N_s(t)\rangle&amp;=\frac{g}{g-s}\bigl(\exp(gt)-\exp(st)\bigr)+\exp(st)\nonumber\\[6pt]
-			&amp;=\frac{g}{g-s}\exp(gt)+\frac{s}{s-g}\exp(st) \end{align}
-			を得る。大きな\(t\)の極限を考えたとき、\(g&gt;s\)ならば\(\exp(st)\)の項が落ち、\(s&gt;g\)ならば\(\exp(gt)\)の項が落ちる。したがって
-			\begin{equation}
 
+			\begin{align}
+			\langle N_s(t)\rangle&amp;=\frac{g}{g-s}\bigl(\exp(gt)-\exp(st)\bigr)+\exp(st)\nonumber\\[6pt]
+			&amp;=\frac{g}{g-s}\exp(gt)+\frac{s}{s-g}\exp(st)
+			\label{eq:}
+			\end{align}
+
+			を得る。大きな\(t\)の極限を考えたとき、\(g&gt;s\)ならば\(\exp(st)\)の項が落ち、\(s&gt;g\)ならば\(\exp(gt)\)の項が落ちる。したがって
+
+			\begin{equation}
 			\langle
 			N_s(t)\rangle\simeq\left\{ \begin{array}{ll} \frac{g}{g-s}\exp(gt) &amp;\quad (g\gt s),\\
 			\frac{s}{s-g}\exp(st)
@@ -652,18 +708,24 @@
 
 			\begin{equation}
 			\Delta k_i(t)=\frac{mk_i(t)}{\sum_i k_i(t)}\Delta t
+			\label{eq:}
 			\end{equation}
 
 			となる。右辺が次数に比例したエッジの獲得を表し、Simonの枠組みから見た修正Yule過程の式(\ref{eq:probability_of_word_selection})の\(n_i/N\)に対応している。\(\sum_ik_i(t)=2mt\)という関係を用いて、\(\Delta
 			k_i\rightarrow 0\), \(\Delta t\rightarrow 0\)の極限を考えれば、
+
 			\begin{equation}
 			\frac{dk_i}{dt}=\frac{k_i}{2t}
-
+			\label{eq:}
 			\end{equation}
+
 			が得られる。積分し、
+
 			\begin{equation}
 			\int\frac{1}{k_i}dk_i=\int\frac{1}{2t}dt.
+			\label{eq:}
 			\end{equation}
+
 			これを解いて
 
 			\begin{equation}
@@ -676,24 +738,27 @@
 			\begin{equation}
 			k_i(t)=m\left(\frac{t}{t_i}\right)^{1/2}
 			\label{eq:growth_of_degree_in_ba_graph}
-
 			\end{equation}
 
 			が求まる。ある次数\(k\)に対して\(k_i(t)\lt k\)となる確率を考えると、式(\ref{eq:growth_of_degree_in_ba_graph})より
-			\begin{equation}
 
+			\begin{equation}
 			P\bigl(k_i(t)\lt k\bigr)=P\biggl(t_i\gt\left(\frac{m}{k}\right)^2t\biggr)
+			\label{eq:}
 			\end{equation}
 
 			が得られる。時間軸\(t\)の直線上にノードの参加時刻は等間隔で並んでいるので、\((0,t)\)の範囲で\(t_i\)が時刻\(t_0\)よりも大きい確率は\(1-t_0/t\)となる。したがって、
 
 			\begin{equation}
 			P\bigl(k_i(t)\lt k\bigr)=1-\left(\frac{m}{k}\right)^2.
+			\label{eq:}
 			\end{equation}
+
 			次数\(k\)の確率密度\(p(k)\)は
 
 			\begin{equation}
 			p(k)=\frac{dP\bigl(k_i(t)\lt k\bigr)}{dk}=2m^2k^{-3}
+			\label{eq:}
 			\end{equation}
 
 			となり、式(\ref{eq:solution_of_ba_graph})を得る。</div>
@@ -702,22 +767,24 @@
 		<div class="p">
 			新しい単語の生成確率\(\alpha\)が定数ではなく、時間的に減衰する場合のSimon過程について考える。まず、式(\ref{eq:simon:rate_equation_of_class-n})(\ref{eq:simon:rate_equation_of_class-1})の\(\alpha\)を\(\alpha(N)\)に置き換える。また、式(\ref{eq:simon:probability_of_class-n})の右辺分母（\(N\)個のワードが書かれたときの語彙サイズ）はもはや\(\alpha
 			N\)とは書けないため、\(K(N)\)と表記する。つまり
+
 			\begin{equation}
 			p(n,N)=\frac{k(n,N)}{K(N)},\qquad dK(N)/dN=\alpha(N).
-
 			\label{eq:simon:probability_of_class-n_time-decaying-alpha}
 			\end{equation}
 
 			定常状態(\ref{eq:simon:stationary_state})を仮定し、式(\ref{eq:simon:probability_of_class-n_time-decaying-alpha})を式(\ref{eq:simon:rate_equation_of_class-n})(\ref{eq:simon:rate_equation_of_class-1})に代入することで
+
 			\begin{align}
 			p(n)&amp;=\frac{\bigl(1-\alpha(N)\bigr)(n-1)}{\frac{\alpha(N)N}{K(N)}+\bigl(1-\alpha(N)\bigr)n}p(n-1)\qquad
-			(n\geq
-			2),\\ p(1)&amp;=\frac{1}{1+\frac{K(N)}{\alpha(N)N}\bigl(1-\alpha(N)\bigr)} \end{align}
+			(n\geq 2),\\ p(1)&amp;=\frac{1}{1+\frac{K(N)}{\alpha(N)N}\bigl(1-\alpha(N)\bigr)}
+			\label{eq:}
+			\end{align}
+
 			を得る。簡単のため\(u=\frac{\alpha(N)N}{K(N)\bigl(1-\alpha(N)\bigr)}\)とおくと、式(\ref{eq:simon:solution-gamma})と全く同じ形になり、
 
 			\begin{equation}
 			p(n)\propto n^{-\gamma},\qquad\gamma=1+\frac{\alpha(N)N}{K(N)\bigl(1-\alpha(N)\bigr)}
-
 			\label{eq:simon:solution-approx_time-decaying-alpha}
 			\end{equation}
 
@@ -766,5 +833,4 @@
 		<div id="footnote"> </div>
 		<h2 id="history" class="nonum">更新履歴</h2>
 		<p>20170605 v2.1.<br />20170106 v2.<br /> 20150401 v1.</p>
-
 	</div>
