@@ -10,8 +10,10 @@
   <script>
     window.MathJax = {
       tex: {
+        packages: {'[+]': ['tagFormat']},
+        tags: 'ams',
         tagFormat: {
-          number: (n) => n
+          number: (n) => '---'+n
         }
       },
       chtml: {
