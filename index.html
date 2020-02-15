@@ -17,7 +17,7 @@
         packages: {'[+]': ['tagFormat']},
         tags: 'ams',
         tagFormat: {
-          number: (n) => n > sep ? 'A-' + (n - sep) : n
+          number: (n) => n > MathJax.sep ? 'A-' + (n - MathJax.sep) : n
         }
       },
       chtml: {
@@ -56,11 +56,11 @@
     }
 
     h1.title {
-      font-size: 16pt;
+      font-size: 18pt;
     }
 
     h1.author {
-      font-size: 12pt;
+      font-size: 14pt;
     }
 
     h2 {
