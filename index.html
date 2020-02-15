@@ -6,7 +6,34 @@
   <title>Yule過程とSimon過程</title>
   <script src="//d3js.org/d3.v4.min.js"></script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <script>
+window.MathJax = {
+  tex: {
+    tags: "ams",
+    tagFormat: {
+      number: function (n) { return n > sep ? "A-" + (n - sep) : n }
+    },
+    autoload: {
+      color: [],
+      colorV2: ['color']
+    },
+    packages: {'[+]': ['noerrors', 'tagFormat']}
+  },
+  chtml: {
+    scale: 0.9
+  },
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  },
+  loader: {
+    load: ['[tex]/noerrors', '[tex]/tagFormat']
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
+  
   <script src="//raw.githubusercontent.com/yasuhirohashimoto/bibliography.js/master/bibliography.js"></script>
   <script src="//raw.githubusercontent.com/yasuhirohashimoto/footnote.js/master/footnote.js"></script>
   <link href="//fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
