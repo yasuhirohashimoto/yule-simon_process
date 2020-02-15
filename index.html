@@ -7,22 +7,21 @@
 	<script src="//d3js.org/d3.v4.min.js"></script>
 	<script src="//polyfill.io/v3/polyfill.min.js?features=es6"></script>
 	<script>
-		MathJax = {
-			sep: 10, // the number of equations before the appendix.
+		window.MathJax = {
+			loader: {
+				load: ['[tex]/tagFormat']
+			},
 			tex: {
+				packages: { '[+]': ['tagFormat'] },
 				tags: 'ams',
 				tagFormat: {
-					number: (n) => n > MathJax.sep ? 'A-' + (n - MathJax.sep) : n,
+					number: (n) => n > 16 ? 'A-' + (n - 16) : n,
 					tag: (n) => '(' + n + ')'
 				}
 			},
 			chtml: {
 				scale: 0.9
 			}
-		};
-		window.MathJax = {
-			loader: { load: ['[tex]/tagFormat'] },
-			packages: { '[+]': ['tagFormat'] }			
 		};
 	</script>
 	<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
@@ -175,9 +174,9 @@
 		<div class="p">1922年にWillisは生物学的属（genus）の数と属が含む種（species）の数がベキ則に従う関係を発見した<a
 				class="cite-Willis1922">ref</a>。つまり、属が含む種の数を\(n\)、\(n\)の種数を持つ属の数を\(N(n)\)としたとき、広い\(n\)のスケールにわたって
 
-			\begin{equation*}
+			\begin{equation}
 			N(n)\propto n^{-\rho},\quad\rho=\mbox{constant}
-			\end{equation*}
+			\end{equation}
 
 			が成り立つ関係である。この事実を説明するために、1925年にYuleが提案した確率モデルがYule過程<a
 				class="cite-Yule1924">ref</a>である。さらに、属を単語、属が含む種の数を単語の出現頻度と読み替えれば、これは人間の言語活動に見られるZipf則の関係にも類似している。1955年にSimonが提案した単語選択の確率モデル―Simon過程<a
@@ -243,9 +242,9 @@
 			mutationのレートと考えればよいだろう。つまり、Simon過程における\(\alpha\)とは修正Yule過程におけるgeneric
 			mutationの相対レートに他ならない。式(\ref{eq:yule-simon_relationship})を式(\ref{eq:simon_distribution})に代入してみよう。
 
-			\begin{equation*}
+			\begin{equation}
 			\gamma=1+\frac{1}{1-\frac{g}{g+s}}=1+\frac{g+s}{s}=2+\frac{g}{s}.
-			\end{equation*}
+			\end{equation}
 
 			式(\ref{eq:modified-yule_distribution})で示した修正Yule過程の指数と同じ結果を得ることが確認できる。</div>
 		<h2 id="difference_between_yule_and_simon_processes">Yule過程とSimon過程の違い</h2>
@@ -313,9 +312,9 @@
 		<div class="p">
 			単語の系列の長さ\(N\)の増加に伴い単語\(i\)はどのように出現数を増やしていくのか？これはBarabási-Albertグラフにおけるノードの成長と同じ問題設定であり、式(\ref{eq:growth_of_degree_in_ba_graph})の導出で用いた議論がそのまま当てはまる。時刻\(N\)のときの単語\(i\)の出現数を\(n_i(N)\)とすると、式(\ref{eq:growth_of_degree_in_ba_graph})にならい
 
-			\begin{equation*}
+			\begin{equation}
 			\Delta n_i(N)=n_i(N+\Delta N)-n_i(N)=(1-\alpha)\frac{n_i(N)}{N}\Delta N
-			\end{equation*}
+			\end{equation}
 
 			という単語の出現数の時間発展式が立てられる。これを解くと
 
@@ -333,9 +332,9 @@
 			N_i\)において式(\ref{eq:growth_of_vocabulary})が与える期待値からの逸脱を評価する。結論を述べれば、出現数が期待値\(n_i(\lambda
 			N_i)=\lambda^{1-\alpha}\)の\(x\)倍になる確率密度は、\(\alpha\rightarrow 0\), \(\lambda\rightarrow \infty\)の極限で
 
-			\begin{equation*}
+			\begin{equation}
 			p(x)\propto \exp(-x)
-			\end{equation*}
+			\end{equation}
 
 			となる。導出の詳細は文献<a class="cite-Hashimoto2016">ref</a>またはその<a
 				href="/misc/growth_fluctuation_in_preferential_attachment_dynamics/">要約</a>を参照。つまり、ゆらぎの大きさは指数関数的に減衰し、期待値(\ref{eq:growth_of_vocabulary})からオーダーが外れるようなゆらぎはほとんど存在しないことが分かる。
@@ -370,16 +369,16 @@
 			N\)であり、このとき\(\beta=1\)のHeaps則(\ref{eq:heaps_law})が成り立つのは自明である。一方、式(\ref{eq:simon_distribution})より、Simon過程から得られるZipf則のベキ指数は\(\theta=1/(\gamma-1)=1-\alpha\)である。つまり、Simon過程ではHeaps則とZipf則の2つのベキ指数は逆数の関係にはなっていない。これはどう理解できるだろうか？この不整合はBaeza-Yatesらの考え方で示した2の仮定（\(\theta\gt
 			1\)）がSimon過程では成立しない（\(\theta=1-\alpha\)）ためで、これは\(\alpha\)を定数ではなく時間的に減衰していく形に一般化したSimon過程を考えることで矛盾なく理解できる。時間減衰する\(\alpha(N)\)を用いたSimon過程から得られるZipf則の指数についてはSimon自身が求めており、
 
-			\begin{equation*}
+			\begin{equation}
 			\theta(N)=\frac{K(N)}{\alpha(N)N}\bigl(1-\alpha(N)\bigr)
-			\end{equation*}
+			\end{equation}
 
 			となる。導出の詳細は<a
 				href="#appendix-solution_of_simon_process_with_time-decaying_novelty_rate">Appendix</a>を参照。これに式(\ref{eq:heaps_law})と\(\alpha(N)=dK(N)/dN\)を代入すると、
 
-			\begin{equation*}
+			\begin{equation}
 			\theta(N)=\frac{1-\alpha(N)}{\beta},\qquad\alpha(N)\propto N^{\beta-1}
-			\end{equation*}
+			\end{equation}
 
 			が得られる。つまり、Sub-Linear則の下で十分大きな\(N\)については\(\alpha(N)\ll 1\)となり、\(\theta(N)\sim
 			1/\beta\)という関係が導かれる。機構論的なモデルとしてのSimon過程にHeaps則を仮定することで、Heaps則の指数と逆数の関係にあるZipf則が導かれるという考え方は、仮定されたZipf則からHeaps則の指数を見積もるBaeza-Yatesらの現象論的な考え方とはちょうど逆のロジックになっている。
@@ -396,10 +395,10 @@
 
 			となる。適当な時刻\(T\)において年齢が\(\tau\)より小さい属の確率は
 
-			\begin{equation*}
+			\begin{equation}
 			P_g(\tau'\lt\tau)=1-\frac{\langle N_g(T-\tau)\rangle}{\langle
 			N_g(T)\rangle}=1-\frac{\exp\bigl(g(T-\tau)\bigr)}{\exp(gT)}=1-\exp(-g\tau)
-			\end{equation*}
+			\end{equation}
 
 			となる（\(T\)に依存しない）。したがって、年齢\(\tau\)の属の確率密度は
 
@@ -410,9 +409,9 @@
 
 			となる。一方、年齢\(\tau\)の属に含まれる種数を\(n(\tau)\)とおくと、
 
-			\begin{equation*}
+			\begin{equation}
 			\frac{dn(\tau)}{d\tau}=sn(\tau),\qquad n(0)=1
-			\end{equation*}
+			\end{equation}
 
 			より
 
@@ -450,15 +449,15 @@
 
 			式(\ref{eq:probability_of_age-tau_genera})(\ref{eq:age_distribution_of_genera2})(\ref{eq:tau-ns_derivative})より
 
-			\begin{equation*}
+			\begin{equation}
 			p(n)=p(\tau)\frac{d\tau}{dn}=\frac{gn^{-g/s}}{sn}=\frac{g}{s}n^{-\left(1+\frac{g}{s}\right)}.
-			\end{equation*}
+			\end{equation}
 
 			したがって
 
-			\begin{equation*}
+			\begin{equation}
 			p(n)=(\rho-1)n^{-\rho},\qquad\rho=1+\frac{g}{s}
-			\end{equation*}
+			\end{equation}
 
 			となり、式(\ref{eq:yule_distribution})が導かれる。</div>
 		<h2 id="appendix-exact_solution_of_yule_process" class="appdx">Yule過程の解の導出（厳密版）<a
@@ -466,9 +465,9 @@
 		<div class="p">厳密版では簡略版で追加した種数の連続性などの仮定を用いない導出を行う。年齢\(\tau\)の属が種数1である確率、つまり一度もspecific
 			mutationが発生しない確率を\(q_1(\tau)\)とおくと、ポアソン分布より
 
-			\begin{equation*}
+			\begin{equation}
 			q_1(\tau)=\frac{(s\tau)^0\exp(-s\tau)}{0!}=\exp(-s\tau)
-			\end{equation*}
+			\end{equation}
 
 			となる。同様に、年齢\(\tau\)の属が種数2である確率を\(q_2(\tau)\)とおくと、
 
@@ -537,15 +536,15 @@
 
 			と変形すると、右辺第1項はそのまま\(p(n-1)\)、右辺第2項は式(\ref{eq:p_n_exp})の積分部分と等しいことが分かる。これを利用すると、
 
-			\begin{equation*}
+			\begin{equation}
 			p(n)=p(n-1)-p(n)\frac{g+s}{(n-1)s}
-			\end{equation*}
+			\end{equation}
 
 			となり、
 
-			\begin{equation*}
+			\begin{equation}
 			p(n)=\frac{(n-1)s}{g+ns}p(n-1)
-			\end{equation*}
+			\end{equation}
 
 			を得る。\(p(1)=g/(g+s)\)を用いれば、
 
@@ -573,15 +572,15 @@
 
 			を用いれば
 
-			\begin{equation*}
+			\begin{equation}
 			\ln\bigl(p(n)\bigr)\simeq-(1+u)\ln(n)+\mbox{constant}.
-			\end{equation*}
+			\end{equation}
 
 			\(u\)を戻すと
 
-			\begin{equation*}
+			\begin{equation}
 			p(n)\propto n^{-\rho},\qquad\rho=1+\frac{g}{s}
-			\end{equation*}
+			\end{equation}
 
 			を得る。
 		</div>
@@ -653,10 +652,10 @@
 		</div>
 		<div class="p">Yule過程において、時刻\(t\)での種数の期待値\(\langle N_s(t)\rangle\)は
 
-			\begin{equation*}
+			\begin{equation}
 			\langle
 			N_s(t)\rangle=\int_0^tg\langle N_g(t_1)\rangle\exp\bigl(s(t-t_1)\bigr)dt_1+\exp(st)
-			\end{equation*}
+			\end{equation}
 
 			と表せる。右辺第1項の積分について、\(g\langle
 			N_g(t_1)\rangle\)は時刻\(t_1\)に新たに生成される属数、\(\exp\bigl(s(t-t_1)\bigr)\)はその新しい属が時刻\(t\)までに生み出す種数を表す。したがって、\(t_1\)を可能な範囲で積分した値が、時刻\(t\)までに生成された属が生み出す種数の総数になる。右辺第2項は最初の属が時刻\(t\)までに生み出した種数である。これを部分積分で解くと、
@@ -686,22 +685,22 @@
 		<div class="p">新規ノードと既存のノードの間に張るエッジの数を\(m\)、時刻\(t\)でのノード\(i\)の次数を\(k_i(t)\)とすると、\(\Delta t\)経過後の次数の増分\(\Delta
 			k_i(t)\)は
 
-			\begin{equation*}
+			\begin{equation}
 			\Delta k_i(t)=\frac{mk_i(t)}{\sum_i k_i(t)}\Delta t
-			\end{equation*}
+			\end{equation}
 
 			となる。右辺が次数に比例したエッジの獲得を表し、Simonの枠組みから見た修正Yule過程の式(\ref{eq:probability_of_word_selection})の\(n_i/N\)に対応している。\(\sum_ik_i(t)=2mt\)という関係を用いて、\(\Delta
 			k_i\rightarrow 0\), \(\Delta t\rightarrow 0\)の極限を考えれば、
 
-			\begin{equation*}
+			\begin{equation}
 			\frac{dk_i}{dt}=\frac{k_i}{2t}
-			\end{equation*}
+			\end{equation}
 
 			が得られる。積分し、
 
-			\begin{equation**}
+			\begin{equation*}
 			\int\frac{1}{k_i}dk_i=\int\frac{1}{2t}dt.
-			\end{equation**}
+			\end{equation*}
 
 			これを解いて
 
@@ -719,21 +718,21 @@
 
 			が求まる。ある次数\(k\)に対して\(k_i(t)\lt k\)となる確率を考えると、式(\ref{eq:growth_of_degree_in_ba_graph})より
 
-			\begin{equation*}
+			\begin{equation}
 			P\bigl(k_i(t)\lt k\bigr)=P\biggl(t_i\gt\left(\frac{m}{k}\right)^2t\biggr)
-			\end{equation*}
+			\end{equation}
 
 			が得られる。時間軸\(t\)の直線上にノードの参加時刻は等間隔で並んでいるので、\((0,t)\)の範囲で\(t_i\)が時刻\(t_0\)よりも大きい確率は\(1-t_0/t\)となる。したがって、
 
-			\begin{equation*}
+			\begin{equation}
 			P\bigl(k_i(t)\lt k\bigr)=1-\left(\frac{m}{k}\right)^2.
-			\end{equation*}
+			\end{equation}
 
 			次数\(k\)の確率密度\(p(k)\)は
 
-			\begin{equation*}
+			\begin{equation}
 			p(k)=\frac{dP\bigl(k_i(t)\lt k\bigr)}{dk}=2m^2k^{-3}
-			\end{equation*}
+			\end{equation}
 
 			となり、式(\ref{eq:solution_of_ba_graph})を得る。</div>
 		<h2 id="appendix-solution_of_simon_process_with_time-decaying_novelty_rate" class="appdx">novelty
