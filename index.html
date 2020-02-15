@@ -15,7 +15,7 @@
       },
       tex: {
         packages: {'[+]': ['tagFormat']},
-        tags: 'ams',
+        tags: 'all',
         tagFormat: {
           number: (n) => n > 16 ? 'A-' + (n - 16) : n,
           tag: (n) => '(' + n + ')'
@@ -92,6 +92,7 @@
     }
 
     div.p {
+      margin-top: .25em;
       text-indent: 0em;
     }
 
