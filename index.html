@@ -17,7 +17,8 @@
         packages: {'[+]': ['tagFormat']},
         tags: 'ams',
         tagFormat: {
-          number: (n) => n > MathJax.sep ? 'A-' + (n - MathJax.sep) : n
+          number: (n) => n > MathJax.sep ? 'A-' + (n - MathJax.sep) : n,
+          tag: (n) => n > MathJax.sep ? 'A-' + (n - MathJax.sep) : n
         }
       },
       chtml: {
