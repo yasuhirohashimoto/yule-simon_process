@@ -8,16 +8,16 @@
 	<script src="//polyfill.io/v3/polyfill.min.js?features=es6"></script>
 	<script>
 		window.MathJax = {
-			loader: {
-				load: ['[tex]/tagFormat']
-			},
+//			loader: {
+//				load: ['[tex]/tagFormat']
+//			},
 			tex: {
-				packages: { '[+]': ['tagFormat'] },
-				tags: 'all',
-				tagFormat: {
-					number: (n) => n > 16 ? 'A-' + (n - 16) : n,
-					tag: (n) => '(' + n + ')'
-				}
+//				packages: { '[+]': ['tagFormat'] },
+				tags: 'ams',
+//				tagFormat: {
+//					number: (n) => n > 16 ? 'A-' + (n - 16) : n,
+//					tag: (n) => '(' + n + ')'
+//				}
 			},
 			chtml: {
 				scale: 0.9
