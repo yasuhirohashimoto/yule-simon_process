@@ -9,12 +9,13 @@
 
 	<script>
 		window.MathJax = {
-			sep: 16, // the number of equations before the appendix.
-			tex: {
-				tagFormat: {
-					number: (n) => n > MathJax.sep ? 'A-' + (n - MathJax.sep) : n
-				}
-			},
+			section: 1,
+  tex: {
+    tagFormat: {
+      number: (n) => MathJax.section + '.' + n,
+      id: (n) => 'eqn-id-' + n
+    }
+  },
 			chtml: {
 				scale: 0.9
 			},
