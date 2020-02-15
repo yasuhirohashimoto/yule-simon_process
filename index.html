@@ -12,16 +12,10 @@
 			loader: {
 				load: ['[tex]/tagFormat']
 			},
-			startup: {
-				pageReady: () => {
-					alert('Running MathJax');
-					return MathJax.startup.defaultPageReady();
-				}
-			},
 			sep: 16, // the number of equations before the appendix.
 			tex: {
-				tags: 'all',
 				packages: { '[+]': ['tagFormat'] },
+				tags: 'ams',
 				tagFormat: {
 					number: (n) => n > 16 ? 'A-' + (n - 16) : n,
 					tag: (n) => '(' + n + ')'
