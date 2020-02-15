@@ -12,8 +12,7 @@
 			sep: 16, // the number of equations before the appendix.
 			tex: {
 				tagFormat: {
-					number: (n) => n,
-					id: (n) => n > MathJax.sep ? 'A-' + (n - MathJax.sep) : n
+					number: (n) => n > MathJax.sep ? 'A-' + (n - MathJax.sep) : n
 				}
 			},
 			chtml: {
