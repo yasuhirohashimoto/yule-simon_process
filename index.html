@@ -7,13 +7,9 @@
 	<script src="//d3js.org/d3.v4.min.js"></script>
 	<script src="//polyfill.io/v3/polyfill.min.js?features=es6"></script>
 	<script>
-		window.MathJax = {
-			loader: {
-				load: ['[tex]/tagFormat']
-			},
-			sep: 16, // the number of equations before the appendix.
+		MathJax = {
+			sep: 10, // the number of equations before the appendix.
 			tex: {
-				packages: { '[+]': ['tagFormat'] },
 				tags: 'ams',
 				tagFormat: {
 					number: (n) => n > MathJax.sep ? 'A-' + (n - MathJax.sep) : n,
@@ -23,6 +19,10 @@
 			chtml: {
 				scale: 0.9
 			}
+		};
+		window.MathJax = {
+			loader: { load: ['[tex]/tagFormat'] },
+			packages: { '[+]': ['tagFormat'] }			
 		};
 	</script>
 	<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
