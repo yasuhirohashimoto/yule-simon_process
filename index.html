@@ -16,7 +16,7 @@
 				packages: { '[+]': ['tagFormat'] },
 				tags: 'ams',
 				tagFormat: {
-					number: (n) => n > 16 ? 'A-' + (n - 16) : n,
+					number: (n) => n > 16 ? 'A-' + (n - 16) : n
 				}
 			},
 			chtml: {
@@ -269,7 +269,7 @@
 			mutationの発生レートが互いに等しかったことを思い出そう。これをSimon過程の枠組みで捉えるならば、それは出現数が等しい単語の成長レートが互いに等しいことを意味する。そのような単語の選択は、クラス\([n]\)の語彙が次に出現する単語の母体として選ばれたとき、その中から例えば一様乱数で単語を一つ選び出すことで実現できる<span
 				class="footnote">厳密にはクラス\([n]\)に属するすべての単語が等しく選び出される必要があるが、状態（出現数）は離散的なのでそれは不可能である。</span>。比較のため、Simon過程とnovelty
 			rateの扱いが等価な修正Yule過程について、Simon過程の枠組みを用いて単語の成長過程で起こっていることを眺めてみよう。この枠組みを本稿では「<a
-				id="yule-simon_process"></a>    Yule-Simon過程」と呼ぶことにする。いま、単語の系列の長さ\(N\)のときの単語\(i\)の出現数を\(n_i\)とおくと、修正Yule過程では単語\(i\)が次に選び出される確率\(P_i(N)\)は
+				id="yule-simon_process"></a>    Yule-Simon過程」と呼ぶことにする。いま、単語の系列の長さ\(N\)のときの単語\(i\)の出現数を\(n_i\)とおくと、修正Yule過程では単語\(i\)が次に選び出される確率\(P_i(N)\)は
 
 			\begin{equation}
 			P_i(N)=(1-\alpha)\cdot\frac{n_ik(n_i,N)}{N}\cdot\frac{n_i}{n_ik(n_i,N)}\quad\biggl[=(1-\alpha)\frac{n_i}{N}\biggr]
@@ -763,7 +763,7 @@
 			を得る。もちろん、\(\alpha\)が定数であれば\(\alpha(N)N=K(N)\)となるので、式(\ref{eq:simon:solution-approx_time-decaying-alpha})は式(\ref{eq:simon:solution-approx})と同一となる。
 		</div>
 		<h2 id="bibliography-section" class="nonum">参考文献</h2>
-		<div id="bibliography"> </div>
+		<div id="bibliography"> </div>
 		<div id="bib-Willis1922">Willis, J. Christopher: Age and area, a study in geographical distribution and origin
 			of
 			species, Cambridge University Press, 1922.</div>
@@ -802,7 +802,7 @@
 				Biol</em>,
 			175, 3, pp.373-388, 1995.</div>
 		<h2 id="footnote-section" class="nonum">脚注</h2>
-		<div id="footnote"> </div>
+		<div id="footnote"> </div>
 		<h2 id="history" class="nonum">更新履歴</h2>
 		<p>20170605 v2.1.<br />20170106 v2.<br /> 20150401 v1.</p>
 	</div>
