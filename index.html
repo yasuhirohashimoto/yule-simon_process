@@ -9,20 +9,21 @@
 
 	<script>
 		window.MathJax = {
+			loader: {
+				load: ['[tex]/tagFormat']
+			},
 			sep: 16, // the number of equations before the appendix.
 			tex: {
 				packages: { '[+]': ['tagFormat'] },
-				tags: 'ams',
+				tags: 'all',
 				tagFormat: {
-					number: (n) => n > 16 ? 'A-' + (n - 16) : n,
+					//number: (n) => n > 16 ? 'A-' + (n - 16) : n,
+					number: (n) => n,
 					tag: (n) => '(' + n + ')'
 				}
 			},
 			chtml: {
 				scale: 0.9
-			},
-			loader: {
-				load: ['[tex]/tagFormat']
 			}
 		};
 	</script>
