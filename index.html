@@ -176,7 +176,6 @@
 
 			\begin{equation}
 			N(n)\propto n^{-\rho},\quad\rho=\mbox{constant}
-			\label{eq:}
 			\end{equation}
 
 			が成り立つ関係である。この事実を説明するために、1925年にYuleが提案した確率モデルがYule過程<a
@@ -245,7 +244,6 @@
 
 			\begin{equation}
 			\gamma=1+\frac{1}{1-\frac{g}{g+s}}=1+\frac{g+s}{s}=2+\frac{g}{s}.
-			\label{eq:}
 			\end{equation}
 
 			式(\ref{eq:modified-yule_distribution})で示した修正Yule過程の指数と同じ結果を得ることが確認できる。</div>
@@ -315,7 +313,6 @@
 
 			\begin{equation}
 			\Delta n_i(N)=n_i(N+\Delta N)-n_i(N)=(1-\alpha)\frac{n_i(N)}{N}\Delta N
-			\label{eq:}
 			\end{equation}
 
 			という単語の出現数の時間発展式が立てられる。これを解くと
@@ -336,7 +333,6 @@
 
 			\begin{equation}
 			p(x)\propto \exp(-x)
-			\label{eq:}
 			\end{equation}
 
 			となる。導出の詳細は文献<a class="cite-Hashimoto2016">ref</a>またはその<a
@@ -374,7 +370,6 @@
 
 			\begin{equation}
 			\theta(N)=\frac{K(N)}{\alpha(N)N}\bigl(1-\alpha(N)\bigr)
-			\label{eq:}
 			\end{equation}
 
 			となる。導出の詳細は<a
@@ -382,7 +377,6 @@
 
 			\begin{equation}
 			\theta(N)=\frac{1-\alpha(N)}{\beta},\qquad\alpha(N)\propto N^{\beta-1}
-			\label{eq:}
 			\end{equation}
 
 			が得られる。つまり、Sub-Linear則の下で十分大きな\(N\)については\(\alpha(N)\ll 1\)となり、\(\theta(N)\sim
@@ -403,7 +397,6 @@
 			\begin{equation}
 			P_g(\tau'\lt\tau)=1-\frac{\langle N_g(T-\tau)\rangle}{\langle
 			N_g(T)\rangle}=1-\frac{\exp\bigl(g(T-\tau)\bigr)}{\exp(gT)}=1-\exp(-g\tau)
-			\label{eq:}
 			\end{equation}
 
 			となる（\(T\)に依存しない）。したがって、年齢\(\tau\)の属の確率密度は
@@ -417,7 +410,6 @@
 
 			\begin{equation}
 			\frac{dn(\tau)}{d\tau}=sn(\tau),\qquad n(0)=1
-			\label{eq:}
 			\end{equation}
 
 			より
@@ -458,14 +450,12 @@
 
 			\begin{equation}
 			p(n)=p(\tau)\frac{d\tau}{dn}=\frac{gn^{-g/s}}{sn}=\frac{g}{s}n^{-\left(1+\frac{g}{s}\right)}.
-			\label{eq:}
 			\end{equation}
 
 			したがって
 
 			\begin{equation}
 			p(n)=(\rho-1)n^{-\rho},\qquad\rho=1+\frac{g}{s}
-			\label{eq:}
 			\end{equation}
 
 			となり、式(\ref{eq:yule_distribution})が導かれる。</div>
@@ -476,7 +466,6 @@
 
 			\begin{equation}
 			q_1(\tau)=\frac{(s\tau)^0\exp(-s\tau)}{0!}=\exp(-s\tau)
-			\label{eq:}
 			\end{equation}
 
 			となる。同様に、年齢\(\tau\)の属が種数2である確率を\(q_2(\tau)\)とおくと、
@@ -484,7 +473,6 @@
 			\begin{align}
 			q_2(\tau)&amp;=\int_0^{\tau}d\tau_1\left[\exp(-s\tau_1)s\exp\bigl(-s(\tau-\tau_1)\bigr)\exp\bigl(-s(\tau-\tau_1)\bigr)\right]\nonumber\\
 			&amp;=\exp(-s\tau)\bigl(1-\exp(-s\tau)\bigr)
-			\label{eq:}
 			\end{align}
 
 			となる。これは年齢\(0\)から\(\tau\)のどこかの点\(\tau_1\)で1度だけspecific
@@ -515,7 +503,6 @@
 			\begin{align}
 			p(n)&amp;=\int_0^1gx^{\frac{g+s}{s}}(1-x)^{n-1}\frac{dx}{sx}\nonumber\\
 			&amp;=\frac{g}{s}\int_0^1x^{\frac{g}{s}}(1-x)^{n-1}dx
-			\label{eq:}
 			\end{align}
 
 			となる。これはそのままベータ関数の形をしているので
@@ -523,7 +510,6 @@
 			\begin{align}
 			p(n)&amp;=\frac{g}{s}\ \mathrm{B}\left(1+\frac{g}{s}, n\right)\nonumber\\ &amp;=\frac{g}{s}\
 			\frac{\Gamma(n)\ \Gamma\left(1+\frac{g}{s}\right)}{\Gamma\left(n+1+\frac{g}{s}\right)}
-			\label{eq:}
 			\end{align}
 
 			を得る。以下、式(\ref{eq:stirling})以降を参照。
@@ -545,21 +531,18 @@
 			\begin{align}
 			p(n)&amp;=\int_0^{\infty}d\tau\Bigl[g\exp\bigl(-(g+s)\tau\bigr)\bigl(1-\exp(-s\tau)\bigr)^{n-2}\bigl(1-\exp(-s\tau)\bigr)\Bigr]\nonumber\\
 			&amp;=\int_0^{\infty}d\tau\Bigl[g\exp\bigl(-(g+s)\tau\bigr)\bigl(1-\exp(-s\tau)\bigr)^{n-2}\Bigr]-\int_0^{\infty}d\tau\Bigl[g\exp\bigl(-(g+2s)\tau\bigr)\bigl(1-\exp(-s\tau)\bigr)^{n-2}\Bigr]
-			\label{eq:}
 			\end{align}
 
 			と変形すると、右辺第1項はそのまま\(p(n-1)\)、右辺第2項は式(\ref{eq:p_n_exp})の積分部分と等しいことが分かる。これを利用すると、
 
 			\begin{equation}
 			p(n)=p(n-1)-p(n)\frac{g+s}{(n-1)s}
-			\label{eq:}
 			\end{equation}
 
 			となり、
 
 			\begin{equation}
 			p(n)=\frac{(n-1)s}{g+ns}p(n-1)
-			\label{eq:}
 			\end{equation}
 
 			を得る。\(p(1)=g/(g+s)\)を用いれば、
@@ -570,6 +553,7 @@
 			\end{equation}
 
 			を得る。この式は、\(n\)が大きくなるにつれて乗算される係数が1に近づいていくため、確率の減衰が遅くなる、つまり確率分布のテールが伸びることを示唆している。</div>
+
 		<div class="p">\(u=g/s\)とおき、式(\ref{eq:yule-solution})をさらに変形すると、
 
 			\begin{align}
@@ -589,14 +573,12 @@
 
 			\begin{equation}
 			\ln\bigl(p(n)\bigr)\simeq-(1+u)\ln(n)+\mbox{constant}.
-			\label{eq:}
 			\end{equation}
 
 			\(u\)を戻すと
 
 			\begin{equation}
 			p(n)\propto n^{-\rho},\qquad\rho=1+\frac{g}{s}
-			\label{eq:}
 			\end{equation}
 
 			を得る。
@@ -634,7 +616,6 @@
 			\begin{align}
 			p(n)&amp;=\frac{(1-\alpha)(n-1)}{1+(1-\alpha)n}p(n-1)\qquad (n\geq 2),\\
 			p(1)&amp;=\frac{1}{2-\alpha}
-			\label{eq:}
 			\end{align}
 
 			を得る。簡単のため\(u=1/(1-\alpha)\)とおくと、
@@ -666,15 +647,13 @@
 			\end{array} \right.
 			\end{equation}
 
-			という関係が導かれる。\(g\gt s\)の場合に\(\alpha'\)は定数、\(g\lt
-			s\)の場合には時間とともに0に漸近していく。導出は以下：
+			という関係が導かれる。\(g\gt s\)の場合に\(\alpha'\)は定数、\(g\lt s\)の場合には時間とともに0に漸近していく。導出は以下：
 		</div>
 		<div class="p">Yule過程において、時刻\(t\)での種数の期待値\(\langle N_s(t)\rangle\)は
 
 			\begin{equation}
 			\langle
 			N_s(t)\rangle=\int_0^tg\langle N_g(t_1)\rangle\exp\bigl(s(t-t_1)\bigr)dt_1+\exp(st)
-			\label{eq:}
 			\end{equation}
 
 			と表せる。右辺第1項の積分について、\(g\langle
@@ -683,7 +662,6 @@
 			\begin{align}
 			\langle N_s(t)\rangle&amp;=\frac{g}{g-s}\bigl(\exp(gt)-\exp(st)\bigr)+\exp(st)\nonumber\\[6pt]
 			&amp;=\frac{g}{g-s}\exp(gt)+\frac{s}{s-g}\exp(st)
-			\label{eq:}
 			\end{align}
 
 			を得る。大きな\(t\)の極限を考えたとき、\(g&gt;s\)ならば\(\exp(st)\)の項が落ち、\(s&gt;g\)ならば\(\exp(gt)\)の項が落ちる。したがって
@@ -708,7 +686,6 @@
 
 			\begin{equation}
 			\Delta k_i(t)=\frac{mk_i(t)}{\sum_i k_i(t)}\Delta t
-			\label{eq:}
 			\end{equation}
 
 			となる。右辺が次数に比例したエッジの獲得を表し、Simonの枠組みから見た修正Yule過程の式(\ref{eq:probability_of_word_selection})の\(n_i/N\)に対応している。\(\sum_ik_i(t)=2mt\)という関係を用いて、\(\Delta
@@ -716,14 +693,12 @@
 
 			\begin{equation}
 			\frac{dk_i}{dt}=\frac{k_i}{2t}
-			\label{eq:}
 			\end{equation}
 
 			が得られる。積分し、
 
 			\begin{equation}
 			\int\frac{1}{k_i}dk_i=\int\frac{1}{2t}dt.
-			\label{eq:}
 			\end{equation}
 
 			これを解いて
@@ -744,21 +719,18 @@
 
 			\begin{equation}
 			P\bigl(k_i(t)\lt k\bigr)=P\biggl(t_i\gt\left(\frac{m}{k}\right)^2t\biggr)
-			\label{eq:}
 			\end{equation}
 
 			が得られる。時間軸\(t\)の直線上にノードの参加時刻は等間隔で並んでいるので、\((0,t)\)の範囲で\(t_i\)が時刻\(t_0\)よりも大きい確率は\(1-t_0/t\)となる。したがって、
 
 			\begin{equation}
 			P\bigl(k_i(t)\lt k\bigr)=1-\left(\frac{m}{k}\right)^2.
-			\label{eq:}
 			\end{equation}
 
 			次数\(k\)の確率密度\(p(k)\)は
 
 			\begin{equation}
 			p(k)=\frac{dP\bigl(k_i(t)\lt k\bigr)}{dk}=2m^2k^{-3}
-			\label{eq:}
 			\end{equation}
 
 			となり、式(\ref{eq:solution_of_ba_graph})を得る。</div>
@@ -778,7 +750,6 @@
 			\begin{align}
 			p(n)&amp;=\frac{\bigl(1-\alpha(N)\bigr)(n-1)}{\frac{\alpha(N)N}{K(N)}+\bigl(1-\alpha(N)\bigr)n}p(n-1)\qquad
 			(n\geq 2),\\ p(1)&amp;=\frac{1}{1+\frac{K(N)}{\alpha(N)N}\bigl(1-\alpha(N)\bigr)}
-			\label{eq:}
 			\end{align}
 
 			を得る。簡単のため\(u=\frac{\alpha(N)N}{K(N)\bigl(1-\alpha(N)\bigr)}\)とおくと、式(\ref{eq:simon:solution-gamma})と全く同じ形になり、
