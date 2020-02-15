@@ -9,10 +9,11 @@
 
 	<script>
 		window.MathJax = {
+			sep: 16, // the number of equations before the appendix.
 			tex: {
-				sep: 16, // the number of equations before the appendix.
 				tagFormat: {
-					number: function (n) { return n > sep ? "A-" + (n - sep) : n }
+					number: (n) => n,
+					id: (n) => n > MathJax.sep ? 'A-' + (n - MathJax.sep) : n
 				}
 			},
 			chtml: {
