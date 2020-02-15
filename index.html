@@ -10,7 +10,11 @@
   <script>
     window.MathJax = {
       tex: {
-        tags: 'ams'
+        tags: 'ams',
+        tagFormat: {
+          number: (n) => n,//MathJax.section + '.' + n,
+          id: (n) => 'eqn-id-' + n
+        }
       },
       chtml: {
         scale: 0.9
