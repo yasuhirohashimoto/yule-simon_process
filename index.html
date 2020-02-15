@@ -10,7 +10,9 @@
   <script>
     window.MathJax = {
       tex: {
-        tags: 'ams'
+        tagFormat: {
+          number: (n) => n
+        }
       },
       chtml: {
         scale: 0.9
