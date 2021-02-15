@@ -185,7 +185,7 @@
 				href="#appendix">Appendix</a>にまとめた。</div>
 		<h2 id="yule_process">Yule過程</h2>
 		<div class="p">
-			Yule過程は遺伝的変異による属と属に含まれる種の増加を記述しており、一つ一つの変異はそれぞれレート係数一定のポアソン過程に従うと仮定する。つまり、属あるいは種の集団で見た場合には、属数あるいは種数の単位時間あたりの増加数はそれ自身の数に比例する：
+			Yule過程は、遺伝的変異による属および属に含まれる種の増加を記述しており、一つ一つの変異はそれぞれレート係数一定のポアソン過程に従うと仮定する。結果として、属あるいは種の集団で見たとき、属数あるいは種数の単位時間あたりの増加数はそれ自身の数に比例する：
 			<ul>
 				<li>generic mutation（属が生み出される変異）の単位時間あたりの発生数は属の総数にレート係数\(g\)で比例する。</li>
 				<li>specific mutation（種が生み出される変異）の単位時間あたりの発生数は属が含む種の数にレート係数\(s\)で比例する。</li>
@@ -203,14 +203,14 @@
 			g\)のとき分布のテールが長く伸びることが分かる。</div>
 		<h2 id="modified-yule_process">修正Yule過程</h2>
 		<div class="p">Yuleは件の論文の中で、個々の属におけるgeneric mutationの発生レートが属ごとに一定ではなく、specific
-			mutationと同様、属のサイズに比例する可能性についても言及している。つまり、多数の種を含む属においては属の変異レートそのものも高まるという考え方である。Yule自身は、属とは生態的に安定な地位を表していて、属の変異はその属に含まれるマイナーな変異種の数には依存しないと考えた。しかし、もし属のサイズにも比例すると考えると、属の増加を記述した式(\ref{eq:mean_growth_of_genera})の右辺は\(\exp(gt)\)ではなく\(\frac{g}{g+s}\exp\bigl((g+s)t\bigr)\)になり、以下、式(\ref{eq:yule_distribution})の導出と全く同様の手順でサイズ\(n\)の属の確率分布
+			mutationと同様、属のサイズに比例する可能性についても言及している。つまり、多数の種を含む属においては属の変異レートそのものも高まるという考え方である。Yule自身は、属とは生態的に安定な地位を表していて、属の変異はその属に含まれるマイナーな変異種の数には依存しないと考えた。しかし、もし属のサイズにも比例すると考えると、属の増加を記述した式(\ref{eq:mean_growth_of_genera})の右辺は\(\exp(gt)\)ではなく\(\frac{g}{g+s}\exp\bigl((g+s)t\bigr)\)になり、以下、式(\ref{eq:yule_distribution})の導出と全く同様の手順で、サイズ\(n\)の属の確率分布
 
 			\begin{equation}
 			p(n)\propto n^{-\varrho},\qquad\varrho=2+\frac{g}{s}
 			\label{eq:modified-yule_distribution}
 			\end{equation}
 
-			が導かれる。これは通常のYule過程と同じく\(g\)と\(s\)の比で指数が決まるベキ分布になっているが、指数に含まれる定数が異なる点に注意。同じ\(g\)と\(s\)の値の組を用いた場合、通常のYule過程に比べて大きなサイズの属の存在確率は小さくなる。属の総数の増加が通常のYule過程に比べて速く、個々の属の勢力が相対的に小さくなるためである。この結果は次に示すSimon過程の結果と等しい。
+			が導かれる。これは通常のYule過程と同じく\(g\)と\(s\)の比で指数が決まるベキ分布になっているが、指数に含まれる定数が異なる点に注意。同じ\(g\)と\(s\)の値の組を用いた場合、通常のYule過程に比べて大きなサイズの属の存在確率は小さくなる。属の総数の増加が通常のYule過程に比べて速く、個々の属の勢力が相対的に小さくなるためである。この結果は次節に示すSimon過程の結果と等しい。
 		</div>
 		<h2 id="simon_process">Simon過程</h2>
 		<div class="p">Simonは文章が書かれる（あるいは読まれる）モデルとして以下のような過程を考えた： <ol>
@@ -385,7 +385,13 @@
 		</div>
 		<h3 id="appendix">Appendix</h3>
 		<h2 id="appendix-solution_of_yule_process" class="appdx">Yule過程の解の導出（簡略版）<a class="cite-Simkin2011">ref</a></h2>
-		<div class="p">簡略版では時間に加えて種数を連続変数とみなす。時刻\(t\)における属の総数の期待値\(\langle N_g(t)\rangle\)は
+		<div class="p">簡略版では時間に加えて種数を連続変数とみなす。時刻\(t\)における属の総数の期待値\(\langle N_g(t)\rangle\)は、
+
+		\begin{equation*}
+			\frac{d\langle N_g(t)\rangle}{dt}=g\langle N_g(t)\rangle,\qquad \langle N_g(0)\rangle=1
+			\end{equation*}
+
+より
 
 			\begin{equation}
 			\langle
@@ -393,7 +399,7 @@
 			\label{eq:mean_growth_of_genera}
 			\end{equation}
 
-			となる。適当な時刻\(T\)において年齢が\(\tau\)より小さい属の確率は
+			を得る。適当な時刻\(T\)において年齢が\(\tau\)より小さい属の確率は
 
 			\begin{equation}
 			P_g(\tau'\lt\tau)=1-\frac{\langle N_g(T-\tau)\rangle}{\langle
@@ -407,7 +413,7 @@
 			\label{eq:age_distribution_of_genera}
 			\end{equation}
 
-			となる。一方、年齢\(\tau\)の属に含まれる種数を\(n(\tau)\)とおくと、
+			となる。一方、年齢\(\tau\)の属に含まれる種数を\(n(\tau)\)（連続変数）とおくと、
 
 			\begin{equation}
 			\frac{dn(\tau)}{d\tau}=sn(\tau),\qquad n(0)=1
@@ -462,7 +468,7 @@
 			となり、式(\ref{eq:yule_distribution})が導かれる。</div>
 		<h2 id="appendix-exact_solution_of_yule_process" class="appdx">Yule過程の解の導出（厳密版）<a
 				class="cite-Simkin2011">ref</a><a class="cite-Bacaer2011">ref</a></h2>
-		<div class="p">厳密版では簡略版で追加した種数の連続性などの仮定を用いない導出を行う。年齢\(\tau\)の属が種数1である確率、つまり一度もspecific
+		<div class="p">厳密版では、簡略版で追加した種数の連続性などの仮定を用いない導出を行う。年齢\(\tau\)の属が種数1である確率、つまり一度もspecific
 			mutationが発生しない確率を\(q_1(\tau)\)とおくと、ポアソン分布より
 
 			\begin{equation}
@@ -472,14 +478,14 @@
 			となる。同様に、年齢\(\tau\)の属が種数2である確率を\(q_2(\tau)\)とおくと、
 
 			\begin{align}
-			q_2(\tau)&amp;=\int_0^{\tau}d\tau_1\left[\exp(-s\tau_1)s\exp\bigl(-s(\tau-\tau_1)\bigr)\exp\bigl(-s(\tau-\tau_1)\bigr)\right]\nonumber\\
+			q_2(\tau)&amp;=\int_0^{\tau}d\tau_1\Bigl[\exp(-s\tau_1)s\left\{\exp\bigl(-s(\tau-\tau_1)\bigr)\right\}^2\Bigr]\nonumber\\
 			&amp;=\exp(-s\tau)\bigl(1-\exp(-s\tau)\bigr)
 			\end{align}
 
 			となる。これは年齢\(0\)から\(\tau\)のどこかの点\(\tau_1\)で1度だけspecific
 			mutationが発生する確率を意味する。つまり <ol>
 				<li>\(\tau_1\)まで変異が発生しない確率：\(\exp(-s\tau_1)\)</li>
-				<li>\(\tau_1\)で2つに増えた種がそれぞれ\(\tau\)まで変異が発生しない確率：\(\exp\bigl(-s(\tau-\tau_1)\bigr)\)</li>
+				<li>\(\tau_1\)で2つに増えた種がそれぞれ\(\tau\)まで変異が発生しない確率：\(\left\{\exp\bigl(-s(\tau-\tau_1)\bigr)\right\}^2\)</li>
 				<li>微小区間で変異が1回発生する確率：\(sd\tau_1\)</li>
 			</ol> の積について、可能な\(\tau_1\)の範囲で積分した値である。同様の考え方で種数\(n\)についても
 
