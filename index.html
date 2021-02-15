@@ -478,14 +478,14 @@
 			となる。同様に、年齢\(\tau\)の属が種数2である確率を\(q_2(\tau)\)とおくと、
 
 			\begin{align}
-			q_2(\tau)&amp;=\int_0^{\tau}d\tau_1\Bigl[\exp(-s\tau_1)s\left\{\exp\bigl(-s(\tau-\tau_1)\bigr)\right\}^2\Bigr]\nonumber\\
+			q_2(\tau)&amp;=\int_0^{\tau}d\tau_1\bigll[\exp(-s\tau_1)s\Bigl\{\exp\bigl(-s(\tau-\tau_1)\bigr)\Bigr\}^2\bigrr]\nonumber\\
 			&amp;=\exp(-s\tau)\bigl(1-\exp(-s\tau)\bigr)
 			\end{align}
 
 			となる。これは年齢\(0\)から\(\tau\)のどこかの点\(\tau_1\)で1度だけspecific
 			mutationが発生する確率を意味する。つまり <ol>
 				<li>\(\tau_1\)まで変異が発生しない確率：\(\exp(-s\tau_1)\)</li>
-				<li>\(\tau_1\)で2つに増えた種がそれぞれ\(\tau\)まで変異が発生しない確率：\(\left\{\exp\bigl(-s(\tau-\tau_1)\bigr)\right\}^2\)</li>
+				<li>\(\tau_1\)で2つに増えた種がそれぞれ\(\tau\)まで変異が発生しない確率：\(\Bigl\{\exp\bigl(-s(\tau-\tau_1)\bigr)\Bigr\}^2\)</li>
 				<li>微小区間で変異が1回発生する確率：\(sd\tau_1\)</li>
 			</ol> の積について、可能な\(\tau_1\)の範囲で積分した値である。同様の考え方で種数\(n\)についても
 
@@ -536,8 +536,9 @@
 			を得る。また、式(\ref{eq:p_n})を
 
 			\begin{align}
-			p(n)&amp;=\int_0^{\infty}d\tau\Bigl[g\exp\bigl(-(g+s)\tau\bigr)\bigl(1-\exp(-s\tau)\bigr)^{n-2}\bigl(1-\exp(-s\tau)\bigr)\Bigr]\nonumber\\
-			&amp;=\int_0^{\infty}d\tau\Bigl[g\exp\bigl(-(g+s)\tau\bigr)\bigl(1-\exp(-s\tau)\bigr)^{n-2}\Bigr]-\int_0^{\infty}d\tau\Bigl[g\exp\bigl(-(g+2s)\tau\bigr)\bigl(1-\exp(-s\tau)\bigr)^{n-2}\Bigr]
+			p(n)=&amp;\int_0^{\infty}d\tau\Bigl[g\exp\bigl(-(g+s)\tau\bigr)\bigl(1-\exp(-s\tau)\bigr)^{n-2}\bigl(1-\exp(-s\tau)\bigr)\Bigr]\nonumber\\
+			=&amp;\int_0^{\infty}d\tau\Bigl[g\exp\bigl(-(g+s)\tau\bigr)\bigl(1-\exp(-s\tau)\bigr)^{n-2}\Bigr]\nonumber\\
+			&amp;-\int_0^{\infty}d\tau\Bigl[g\exp\bigl(-(g+2s)\tau\bigr)\bigl(1-\exp(-s\tau)\bigr)^{n-2}\Bigr]
 			\end{align}
 
 			と変形すると、右辺第1項はそのまま\(p(n-1)\)、右辺第2項は式(\ref{eq:p_n_exp})の積分部分と等しいことが分かる。これを利用すると、
