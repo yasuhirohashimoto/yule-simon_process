@@ -155,8 +155,8 @@
 				<li><a href="#modified-yule_process">修正Yule過程</a></li>
 				<li><a href="#simon_process">Simon過程</a></li>
 				<li><a href="#difference_between_yule_and_simon_processes">Yule過程とSimon過程の違い</a></li>
-				<li><a href="#barabasi-albert_graph">Barabási-AlbertグラフとYule-Simon過程のアナロジー</a></li>
-				<li><a href="#growth_dynamics_in_simon_process">Yule-Simon過程における単語の成長</a></li>
+				<li><a href="#barabasi-albert_graph">Barabási-AlbertグラフとYule―Simon過程のアナロジー</a></li>
+				<li><a href="#growth_dynamics_in_simon_process">Yule―Simon過程における単語の成長</a></li>
 				<li><a href="#heaps_law_and_zipf_law">Heaps則とZipf則との関係</a></li>
 			</ol> <a href="#appendix">Appendix</a>
 			<ol class="appendix">
@@ -247,12 +247,12 @@
 
 			\begin{equation}
 			\frac{\alpha}{1-\alpha}=\frac{g}{s},\quad\mbox{or}\quad \alpha=\frac{g}{g+s}
-			\label{eq:yule-simon_relationship}
+			\label{eq:Yule―Simon_relationship}
 			\end{equation}
 
 			が成り立つ．最初の式の両辺の分子を「種数にかかる」generic mutationのレート，分母を「種数にかかる」specific
 			mutationのレートと考えればよいだろう．つまり，Simon過程における \(\alpha\) とは修正Yule過程におけるgeneric
-			mutationの相対レートに他ならない．式(\ref{eq:yule-simon_relationship})を式(\ref{eq:simon_distribution})に代入してみよう．
+			mutationの相対レートに他ならない．式(\ref{eq:Yule―Simon_relationship})を式(\ref{eq:simon_distribution})に代入してみよう．
 
 			\begin{equation}
 			\gamma=1+\frac{1}{1-\frac{g}{g+s}}=1+\frac{g+s}{s}=2+\frac{g}{s}.
@@ -261,27 +261,27 @@
 			式(\ref{eq:modified-yule_distribution})で示した修正Yule過程の指数と同じ結果を得ることが確認できる．</div>
 		<h2 id="difference_between_yule_and_simon_processes">Yule過程とSimon過程の違い</h2>
 		<div class="p">
-			一つの違いは時間発展の進行手順の違いである．Yule過程では属の増加と属が含む種の増加は2つのパラメータ \(g\) と \(s\) で同時進行するのに対し，Simon過程では語彙のサイズの増加と個々の単語の出現数の増加は1つのパラメータ \(\alpha\) で確率的に選択的に進行する．そして，Yule過程では各属において同時並行かつ指数関数的に種数は増加し，全体の種数は実時間に対して指数関数の和で増加していく．Yule過程における全体の種数とはSimon過程における全ての単語の出現数の和，すなわち単語の系列の長さ＝時間に対応する概念であるから，Simon過程の枠組みから見たときYule過程では時間が加速していくように見える．しかし，このいわば「時間の密度の違い」は観点の違いであり，重要な違いではない．
+			一つの違いは時間発展の進行手順の違いである．Yule過程では属の増加と属が含む種の増加は2つのパラメータ \(g\) と \(s\) で同時進行するのに対し，Simon過程では語彙のサイズの増加と個々の単語の出現数の増加は1つのパラメータ \(\alpha\) で確率的に選択的に進行する．つまり，Yule過程では各属において同時並行かつ指数関数的に種数は増加し，全体の種数は実時間に対して指数関数の和で増加していく．Yule過程における全体の種数とは，Simon過程における全ての単語の出現数の和，すなわち単語の系列の長さ＝時間に対応する概念である．したがって，単位時間あたりの種数の増加が時間とともに加速していくYule過程では，Simon過程の枠組みから見たとき時間が加速していくように見える．しかし，このいわば「時間の密度の違い」は観点の違いであり，重要な違いではない．
 		</div>
 		<div class="p">
-			外形的に大きな違いは両者のサイズ分布に見られるベキ指数の違いである．この違いは修正Yule過程で成立した式(\ref{eq:yule-simon_relationship})が，通常のYule過程では
+			外形的に大きな違いは両者のサイズ分布に見られるベキ指数の違いである．この違いは修正Yule過程で成立した式(\ref{eq:Yule―Simon_relationship})が，通常のYule過程では
 
 			\begin{equation}
 			\frac{\alpha'}{1-\alpha'}=\frac{gN_g}{sN_s},\quad\mbox{or}\quad\alpha'=\frac{gN_g}{gN_g+sN_s}
 			\label{eq:novelty_rate_in_yule_process}
 			\end{equation}
 
-			となることに起因する．ここで \(N_g\) は属の総数，\(N_s\) は種の総数を表す．つまり，式(\ref{eq:yule-simon_relationship})の最初の式では右辺の分子の \(g\) と分母の \(s\) がともに種数 \(N_s\) にかかっていたのに対し，式(\ref{eq:novelty_rate_in_yule_process})の \(g\) にかかるのは \(N_s\) ではなく \(N_g\) である．この違いの考え方については<a
+			となることに起因する．ここで \(N_g\) は属の総数，\(N_s\) は種の総数を表す．つまり，式(\ref{eq:Yule―Simon_relationship})の最初の式では右辺の分子の \(g\) と分母の \(s\) がともに種数 \(N_s\) にかかっていたのに対し，式(\ref{eq:novelty_rate_in_yule_process})の \(g\) にかかるのは \(N_s\) ではなく \(N_g\) である．この違いの考え方については<a
 				href="#modified-yule_process">修正Yule過程</a>で述べた．いま \(g\) と \(s\) を固定したとき，\(N_g\leq
 			N_s\) より \(\alpha\ge\alpha'\) である．つまり，Simonのnovelty rateの観点から見れば，Yule過程に対応する(pseudo) novelty
 			rateはSimon過程よりも小さな値になる．式(\ref{eq:novelty_rate_in_yule_process})の詳しい解は<a
 				href="#appendix-novelty_rate_in_yule_process">Appendix</a>を参照．</div>
 		<div class="p">もう一つの重要な違いは，Simon過程ではクラス \(n\) の語彙が選択されたとしても，その中から具体的にどの単語が選択されるかについては任意性が残されている点である<span
 				class="footnote">つまり，Simon過程のみでは個々の単語の成長を計算アルゴリズムとして実装することができない．</span>．Yule過程では種数が等しい属のspecific
-			mutationの発生レートが互いに等しかったことを思い出そう．これをSimon過程の枠組みで捉えるならば，それは出現数が等しい単語の成長レートが互いに等しいことを意味する．そのような単語の選択は，クラス \(n\) の語彙が次に出現する単語の母体として選ばれたとき，その中から例えば一様乱数で単語を一つ選び出すことで実現できる<span
+			mutationの発生レートが互いに等しかったことを思い出そう．これをSimon過程の枠組みで捉えるならば，それは出現数が等しい単語の成長レートが互いに等しいことを意味する．そのような単語の選択は，クラス \(n\) の語彙が次に出現する単語の母集団として選ばれたとき，その中から例えば一様乱数で単語を一つ選び出すことで実現できる<span
 				class="footnote">厳密にはクラス \(n\) に属するすべての単語が等しく選び出される必要があるが，状態（出現数）は離散的なのでそれは不可能である．</span>．比較のため，Simon過程とnovelty
-			rateの扱いが等価な修正Yule過程について，Simon過程の枠組みを用いて単語の成長過程で起こっていることを眺めてみよう．この枠組みを本稿では「<a id="yule-simon_process"></a>
-			Yule-Simon過程」と呼ぶことにする．いま，単語の系列の長さ \(N\) のときの単語 \(i\) の出現数を \(n_i\) とおくと，修正Yule過程では単語 \(i\) が次に選び出される確率 \(P_i(N)\) は
+			rateの扱いが等価な修正Yule過程について，Simon過程の枠組みを用いて単語の成長過程で起こっていることを眺めてみよう．この枠組みを本稿では「<a id="Yule―Simon_process"></a>
+			Yule―Simon過程」と呼ぶことにする．いま，単語の系列の長さ \(N\) のときの単語 \(i\) の出現数を \(n_i\) とおくと，修正Yule過程では単語 \(i\) が次に選び出される確率 \(P_i(N)\) は
 
 			\begin{equation}
 			P_i(N)=(1-\alpha)\cdot\frac{n_ik(n_i,N)}{N}\cdot\frac{n_i}{n_ik(n_i,N)}\quad\biggl[=(1-\alpha)\frac{n_i}{N}\biggr]
@@ -298,7 +298,7 @@
 				<li>新規性の成長則に関して，Yule過程はSimon過程よりも強い仮定を置いている．ポピュレーションのベキ分布を生じるにはSimonの仮定で十分．</li>
 			</ol>
 		</div>
-		<h2 id="barabasi-albert_graph">Barabási-AlbertグラフとYule-Simon過程のアナロジー</h2>
+		<h2 id="barabasi-albert_graph">Barabási-AlbertグラフとYule―Simon過程のアナロジー</h2>
 		<div class="p">1999年にBarabásiらが提案した成長するグラフモデル（Barabási-Albertグラフ）<a
 				class="cite-Barabasi1999">ref</a>とのアナロジーについて考える．Barabásiらは，ノードが次数 \(k\) （接続されたエッジの数）に比例してさらなるエッジを獲得していくことで，次数の確率分布が
 
@@ -313,11 +313,11 @@
 		<div class="p">
 			いまグラフのノードを属，ノードに接続されたエッジを属に含まれる種と読み替えれば，ノードにエッジが接続されていく過程は属が種数を増やしていく過程とみなすことができる．そのような視点に立てば，Preferential
 			AttachmentとはYule過程における種数増加のルール（属が含む種数に比例してspecific
-			mutationが発生）と等価であることが分かる．さらに，次数の獲得イベントが新規ノードと既存ノードで等しい割合で発生する条件は，Simon過程における単語の生成と成長が等しい割合で発生する条件 \(\alpha=0.5\) と等価である．つまり，Barabási-AlbertグラフとはYule-Simon過程の亜種に他ならない．次数分布のベキ指数3は式(\ref{eq:simon_distribution})と \(\alpha=0.5\) から率直に得られる帰結である．Barabásiらの論文の1年後，BornholdtらはSimon過程における単語選択ルールの任意性を再検討することで，Barabási-Albertグラフよりも一般性の高いグラフの生成モデルを提案した<a
+			mutationが発生）と等価であることが分かる．さらに，次数の獲得イベントが新規ノードと既存ノードで等しい割合で発生する条件は，Simon過程における単語の生成と成長が等しい割合で発生する条件 \(\alpha=0.5\) と等価である．つまり，Barabási-AlbertグラフとはYule―Simon過程の亜種に他ならない．次数分布のベキ指数3は式(\ref{eq:simon_distribution})と \(\alpha=0.5\) から率直に得られる帰結である．Barabásiらの論文の1年後，BornholdtらはSimon過程における単語選択ルールの任意性を再検討することで，Barabási-Albertグラフよりも一般性の高いグラフの生成モデルを提案した<a
 				class="cite-Bornholdt2001">ref</a>．</div>
-		<h2 id="growth_dynamics_in_simon_process">Yule-Simon過程における単語の成長</h2>
+		<h2 id="growth_dynamics_in_simon_process">Yule―Simon過程における単語の成長</h2>
 		<div class="p">ここまでは主に生物学的属や語彙が示すサイズの確率分布についてみてきた．ここでは<a
-				href="#yule-simon_process">Yule-Simon過程</a>（つまりPreferential
+				href="#Yule―Simon_process">Yule―Simon過程</a>（つまりPreferential
 			Attachmentに従うSimon過程）を基礎に，個々の単語がどのように成長するか？つまり単語の個性についてみていく<span class="footnote">これはCitation
 				Dynamics（学術論文が引用件数をどのように獲得していくか），あるいはそれに関連してAttention
 				Decay（新規性はどのように忘れられていくか）といった分野にもつながるトピックである．</span>．</div>
