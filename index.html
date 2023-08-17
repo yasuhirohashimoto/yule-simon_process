@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Yule過程とSimon過程</title>
-	<script src="//d3js.org/d3.v4.min.js"></script>
+	<script src="//d3js.org/d3.v5.min.js"></script>
 	<script src="//polyfill.io/v3/polyfill.min.js?features=es6"></script>
 	<script>
 		window.MathJax = {
@@ -175,7 +175,7 @@
 		</div>
 		<h2 id="introduction">導入</h2>
 		<div class="p">1922年にWillisは生物学的属（genus）の数と属が含む生物学的種（species）の数がベキ則に従う関係を発見した<a
-				class="cite-Willis1922">ref</a>．つまり，属が含む種の数を \(n\) とし，\(n\) の種数を持つ属の数を \(N(n)\) としたとき，広い \(n\) のスケールにわたって
+				class="cite-Willis1922"></a>．つまり，属が含む種の数を \(n\) とし，\(n\) の種数を持つ属の数を \(N(n)\) としたとき，広い \(n\) のスケールにわたって
 
 			\begin{equation}
 			N(n)\propto n^{-\rho},\quad\rho=\mbox{constant}
@@ -185,9 +185,9 @@
 		</div>
 		<div class="p">
 			この事実を説明するために，1925年にYuleが提案した確率モデルがYule過程<a
-				class="cite-Yule1924">ref</a>である．さらに，属を単語，属が含む種の数を単語の出現頻度と読み替えれば，これは人間の言語活動に見られるZipf則の関係にも類似している．1955年にSimonが提案した単語選択の確率モデル―Simon過程<a
-				class="cite-Simon1955">ref</a>はこのYule過程をレビューしたもので，この2つの古典的な確率過程は細部が異なるものの基本的なアイデアを共有している．それは現象的には新規性の発生と，それが系の中でポピュレーション<span class="footnote">ポピュレーション（population）とは一般に「個体数」を指す言葉だが，あるカテゴリーを構成する要素の数—属における種数や語彙における各単語の出現数—を指す広い概念として用いている．ポピュレーションの時間的増減を捉える分野は個体群動態（population dynamics）と呼ばれる．<a
-					class="population-dynamics">ref</a></span>を拡大する過程を記述したモデルであり，また数理的には2種類の指数関数的成長からポピュレーションのベキ分布を生じる分岐過程（branching
+				class="cite-Yule1924"></a>である．さらに，属を単語，属が含む種の数を単語の出現頻度と読み替えれば，これは人間の言語活動に見られるZipf則の関係にも類似している．1955年にSimonが提案した単語選択の確率モデル―Simon過程<a
+				class="cite-Simon1955"></a>はこのYule過程をレビューしたもので，この2つの古典的な確率過程は細部が異なるものの基本的なアイデアを共有している．それは現象的には新規性の発生と，それが系の中でポピュレーション<span class="footnote">ポピュレーション（population）とは一般に「個体数」を指す言葉だが，あるカテゴリーを構成する要素の数—属における種数や語彙における各単語の出現数—を指す広い概念として用いている．ポピュレーションの時間的増減を捉える分野は個体群動態（population dynamics）と呼ばれる．<a
+					class="cite-population-dynamics"></a></span>を拡大する過程を記述したモデルであり，また数理的には2種類の指数関数的成長からポピュレーションのベキ分布を生じる分岐過程（branching
 			process）のモデルである．
 		</div>
 		<div class="p">
@@ -200,8 +200,8 @@
 				<li>generic mutation（属が生み出される変異）の単位時間あたりの発生数は属の総数にレート係数 \(g\) で比例する．</li>
 				<li>specific mutation（種が生み出される変異）の単位時間あたりの発生数は属が含む種の数にレート係数 \(s\) で比例する．</li>
 			</ul> したがって，属の総数および属が含む種の数は時間とともにそれぞれ指数関数的に増加していく．ここでの大きな関心は，十分に長い時間が経過した後の属のサイズ（属が含む種の数）の確率分布である<span
-				class="footnote">例えば，属を都市，属のサイズを都市の人口と読み替え，都市の人口動態モデルを考えることも可能だろう<a class="cite-Simon1955">ref</a><a
-					class="cite-Gabaix1999">ref</a>．</span>．Yuleは，上の2つの仮定に加えて時間を連続変数とみなすことで，サイズ \(n\) の属の確率分布
+				class="footnote">例えば，属を都市，属のサイズを都市の人口と読み替え，都市の人口動態モデルを考えることも可能だろう<a class="cite-Simon1955"></a><a
+					class="cite-Gabaix1999"></a>．</span>．Yuleは，上の2つの仮定に加えて時間を連続変数とみなすことで，サイズ \(n\) の属の確率分布
 
 			\begin{equation}
 			p(n)\propto n^{-\rho},\qquad\rho=1+\frac{g}{s}
@@ -301,7 +301,7 @@
 		</div>
 		<h2 id="barabasi-albert_graph">Barabási-AlbertグラフとYule–Simon過程のアナロジー</h2>
 		<div class="p">1999年にBarabásiらが提案した成長するグラフモデル（Barabási-Albertグラフ）<a
-				class="cite-Barabasi1999">ref</a>とのアナロジーについて考える．Barabásiらは，ノードが次数 \(k\) （接続されたエッジの数）に比例してさらなるエッジを獲得していくことで，次数の確率分布が
+				class="cite-Barabasi1999"></a>とのアナロジーについて考える．Barabásiらは，ノードが次数 \(k\) （接続されたエッジの数）に比例してさらなるエッジを獲得していくことで，次数の確率分布が
 
 			\begin{equation}
 			p(k)\propto k^{-3}
@@ -315,7 +315,7 @@
 			いまグラフのノードを属，ノードに接続されたエッジを属に含まれる種と読み替えれば，ノードにエッジが接続されていく過程は属が種数を増やしていく過程とみなすことができる．そのような視点に立てば，Preferential
 			AttachmentとはYule過程における種数増加のルール（属が含む種数に比例してspecific
 			mutationが発生）と等価であることが分かる．さらに，次数の獲得イベントが新規ノードと既存ノードで等しい割合で発生する条件は，Simon過程における単語の生成と成長が等しい割合で発生する条件 \(\alpha=0.5\) と等価である．つまり，Barabási-AlbertグラフとはYule–Simon過程の亜種に他ならない．次数分布のベキ指数3は式(\ref{eq:simon_distribution})と \(\alpha=0.5\) から率直に得られる帰結である．Barabásiらの論文の1年後，BornholdtらはSimon過程における単語選択ルールの任意性を再検討することで，Barabási-Albertグラフよりも一般性の高いグラフの生成モデルを提案した<a
-				class="cite-Bornholdt2001">ref</a>．</div>
+				class="cite-Bornholdt2001"></a>．</div>
 		<h2 id="growth_dynamics_in_simon_process">Yule–Simon過程における単語の成長</h2>
 		<div class="p">ここまでは主に生物学的属や語彙が示すサイズの確率分布についてみてきた．ここでは<a
 				href="#Yule–Simon_process">Yule–Simon過程</a>（つまりPreferential
@@ -349,7 +349,7 @@
 			p(x)\propto \exp(-x)
 			\end{equation}
 
-			となる．導出の詳細は文献<a class="cite-Hashimoto2016">ref</a>またはその<a
+			となる．導出の詳細は文献<a class="cite-Hashimoto2016"></a>またはその<a
 				href="/misc/growth_fluctuation_in_preferential_attachment_dynamics/">要約</a>を参照．つまり，ゆらぎの大きさは指数関数的に減衰し，期待値(\ref{eq:growth_of_vocabulary})からオーダーが外れるようなゆらぎはほとんど存在しないことが分かる．
 		</div>
 		<h2 id="heaps_law_and_zipf_law">Heaps則とZipf則との関係</h2>
@@ -371,7 +371,7 @@
 			\end{equation}
 
 			と表記する．\(K\) は語彙サイズ，\(r\) は単語を出現頻度の降順で並べた時のランク（ランク1が最頻出単語，ランク \(K\) が最希少単語），\(n_r\) はランク \(r\) の単語の出現数，\(A\) は規格化定数，\(\theta\) はベキ指数である．Baeza-Yatesらは現象論的な考察によりHeaps則とZipf則の2つのベキ指数は逆数の関係にあることを示した<a
-				class="cite-Baeza2000">ref</a>．考え方は以下のとおり： <ol>
+				class="cite-Baeza2000"></a>．考え方は以下のとおり： <ol>
 				<li>Zipf則が成り立つと仮定し，最希少な単語は1回程度しか出現しないと考える．すると，ランク \(K\) の単語の出現数は \(AK^{-\theta}\approx
 					1\) となり，\(K\) は \(O(A^{1/\theta})\) でスケールすることが分かる．</li>
 				<li> \(\theta\gt 1\) を仮定すると，式(\ref{eq:zipf_law})の規格化定数 \(A\) の分母は有限の値をとり，したがって \(A\) は \(O(N)\) でスケールする．</li>
@@ -397,7 +397,7 @@
 			1/\beta\) という関係が導かれる．機構論的なモデルとしてのSimon過程にHeaps則を仮定することで，Heaps則の指数と逆数の関係にあるZipf則が導かれるという考え方は，仮定されたZipf則からHeaps則の指数を見積もるBaeza-Yatesらの現象論的な考え方とはちょうど逆のロジックになっている．
 		</div>
 		<h2 id="appendix" class="nonum">Appendix</h2>
-		<h2 id="appendix-solution_of_yule_process" class="appdx">Yule過程の解の導出（簡略版）<a class="cite-Simkin2011">ref</a></h2>
+		<h2 id="appendix-solution_of_yule_process" class="appdx">Yule過程の解の導出（簡略版）<a class="cite-Simkin2011"></a></h2>
 		<div class="p">簡略版では時間に加えて種数を連続変数とみなす．時刻 \(t\) における属の総数の期待値 \(\langle N_g(t)\rangle\) は，
 
 			\begin{equation*}
@@ -480,7 +480,7 @@
 
 			となり，式(\ref{eq:yule_distribution})が導かれる．</div>
 		<h2 id="appendix-exact_solution_of_yule_process" class="appdx">Yule過程の解の導出（厳密版）<a
-				class="cite-Simkin2011">ref</a><a class="cite-Bacaer2011">ref</a></h2>
+				class="cite-Simkin2011"></a><a class="cite-Bacaer2011"></a></h2>
 		<div class="p">厳密版では，簡略版で追加した種数の連続性などの仮定を用いない導出を行う．年齢 \(\tau\) の属が種数1である確率，つまり一度もspecific
 			mutationが発生しない確率を \(q_1(\tau)\) とおくと，ポアソン分布より
 
@@ -517,7 +517,7 @@
 
 			と求まる．この式を展開していくと階乗が現れ，Stirlingの近似を用いることでベキ関数の式(\ref{eq:yule_distribution})が導かれる．Simkinらの簡明な方法とBacaërの丁寧な方法の2つを紹介する．
 		</div>
-		<h3>Simkinらの方法<a class="cite-Simkin2011">ref</a></h3>
+		<h3>Simkinらの方法<a class="cite-Simkin2011"></a></h3>
 		<div class="p">変数変換  \(x=\exp(-s\tau)\)  によって積分範囲が0～1に変わり，\(dx/d\tau=-sx\) より
 
 			\begin{align}
@@ -534,7 +534,7 @@
 
 			を得る．以下，式(\ref{eq:stirling})以降を参照．
 		</div>
-		<h3>Bacaërの方法<a class="cite-Bacaer2011">ref</a></h3>
+		<h3>Bacaërの方法<a class="cite-Bacaer2011"></a></h3>
 		<div class="p">部分積分によって
 
 			\begin{align}
@@ -604,8 +604,8 @@
 
 			を得る．
 		</div>
-		<h2 id="appendix-solution_of_simon_process" class="appdx">Simon過程の解の導出<a class="cite-Simon1955">ref</a><a
-				class="cite-Simkin2011">ref</a></h2>
+		<h2 id="appendix-solution_of_simon_process" class="appdx">Simon過程の解の導出<a class="cite-Simon1955"></a><a
+				class="cite-Simkin2011"></a></h2>
 		<div class="p">ここでは \(k(n,N)\) を \(N\) 個の単語が書かれた時点におけるクラス \(n\) の語彙サイズの期待値とみなす．すると語彙サイズに関する時間発展式は
 
 			\begin{align}
@@ -657,7 +657,7 @@
 
 			となり，式(\ref{eq:simon_distribution})が導かれる．</div>
 		<h2 id="appendix-novelty_rate_in_yule_process" class="appdx">Yule過程におけるnovelty rateの評価<a
-				class="cite-Simkin2011">ref</a>
+				class="cite-Simkin2011"></a>
 		</h2>
 		<div class="p">Simon過程における \(\alpha\) がYule過程の2つのmutation rateを用いてどのように表されるかについてもう少し細かく見てみると，
 
@@ -697,7 +697,7 @@
 
 			となり，これを式(\ref{eq:novelty_rate_in_yule_process})に代入することで式(\ref{eq:solution_of_simons_alpha_in_yule_process})を得る．
 		</div>
-		<h2 id="appendix-solution_of_ba_graph" class="appdx">Barabási-Albertグラフの解の導出<a class="cite-Barabasi1999">ref</a>
+		<h2 id="appendix-solution_of_ba_graph" class="appdx">Barabási-Albertグラフの解の導出<a class="cite-Barabasi1999"></a>
 		</h2>
 		<div class="p">
 			Barabási-Albertグラフとは，単位時間ごとにネットワークにノードを１つ追加し，新規ノードから既存のノードにその次数に比例した確率でエッジを張るネットワークの生成モデルである．本来は時間も次数も離散量だが，ここでは連続変数とみなして解を導出する．
@@ -756,7 +756,7 @@
 
 			となり，式(\ref{eq:solution_of_ba_graph})を得る．</div>
 		<h2 id="appendix-solution_of_simon_process_with_time-decaying_novelty_rate" class="appdx">novelty
-			rateが時間減衰するSimon過程の解の導出<a class="cite-Simon1955">ref</a></h2>
+			rateが時間減衰するSimon過程の解の導出<a class="cite-Simon1955"></a></h2>
 		<div class="p">
 			新しい単語の生成確率 \(\alpha\) が定数ではなく，時間的に減衰する場合のSimon過程について考える．まず，式(\ref{eq:simon:rate_equation_of_class-n})(\ref{eq:simon:rate_equation_of_class-1})の \(\alpha\) を \(\alpha(N)\) に置き換える．また，式(\ref{eq:simon:probability_of_class-n})の右辺分母（ \(N\) 個のワードが書かれたときの語彙サイズ）はもはや \(\alpha
 			N\) とは書けないため，\(K(N)\) と表記する．つまり
@@ -827,3 +827,4 @@
 		<h2 id="footnote-section" class="nonum">脚注</h2>
 		<div id="footnote"> </div>
 	</div>
+	<hr>
