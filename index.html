@@ -62,7 +62,7 @@
 
 		h2 {
 			font-size: 18pt;
-			margin: 15px 0 5px 0;
+			margin: 20px 0 5px 0;
 			border-bottom: 1px solid #ccc;
 		}
 
@@ -174,7 +174,7 @@
 			</ol>
 		</div>
 		<h2 id="introduction">導入</h2>
-		<div class="p">1922年にWillisは生物学的属（genus）の数と属が含む種（species）の数がベキ則に従う関係を発見した<a
+		<div class="p">1922年にWillisは生物学的属（genus）の数と属が含む生物学的種（species）の数がベキ則に従う関係を発見した<a
 				class="cite-Willis1922">ref</a>．つまり，属が含む種の数を \(n\) とし，\(n\) の種数を持つ属の数を \(N(n)\) としたとき，広い \(n\) のスケールにわたって
 
 			\begin{equation}
@@ -186,7 +186,8 @@
 		<div class="p">
 			この事実を説明するために，1925年にYuleが提案した確率モデルがYule過程<a
 				class="cite-Yule1924">ref</a>である．さらに，属を単語，属が含む種の数を単語の出現頻度と読み替えれば，これは人間の言語活動に見られるZipf則の関係にも類似している．1955年にSimonが提案した単語選択の確率モデル―Simon過程<a
-				class="cite-Simon1955">ref</a>はこのYule過程をレビューしたもので，この2つの古典的な確率過程は細部が異なるものの基本的なアイデアを共有している．それは意味的には新規性の発生と，それが系の中でポピュレーションを拡大する過程を記述したモデルであり，また数理的には2種類の指数関数的成長からポピュレーションのベキ分布を生じる分岐過程（branching
+				class="cite-Simon1955">ref</a>はこのYule過程をレビューしたもので，この2つの古典的な確率過程は細部が異なるものの基本的なアイデアを共有している．それは現象的には新規性の発生と，それが系の中でポピュレーション<span class="footnote">ポピュレーション（population）とは一般に「個体数」を指す言葉だが，あるカテゴリーを構成する要素の数—属における種数や語彙における各単語の出現数—を指す広い概念として用いている．ポピュレーションの時間的増減を捉える分野は個体群動態（population dynamics）と呼ばれる．<a
+					class="population-dynamics">ref</a></span>を拡大する過程を記述したモデルであり，また数理的には2種類の指数関数的成長からポピュレーションのベキ分布を生じる分岐過程（branching
 			process）のモデルである．
 		</div>
 		<div class="p">
@@ -667,7 +668,7 @@
 			\end{array} \right.
 			\end{equation}
 
-			という関係が導かれる．\(g\gt s\) の場合に \(\alpha'\) は定数，\(g\lt s\) の場合には時間とともに0に漸近していく．導出は以下：
+			という関係が導かれる．\(g\gt s\) の場合に \(\alpha'\) は定数，\(g\lt s\) の場合には時間とともに0に漸近していく．導出を以下に示す．
 		</div>
 		<div class="p">Yule過程において，時刻 \(t\) での種数の期待値 \(\langle N_s(t)\rangle\) は
 
@@ -802,7 +803,7 @@
 			networks,
 			<em>Physica A</em>, 272, 1, pp.173-187, 1999.
 		</div>
-		<div id="bib-Bornholdt2001">Bornholdt, Stefan &amp; Ebel, Holger: World Wide Web scaling exponent from Simon’s
+		<div id="bib-Bornholdt2001">Bornholdt, Stefan &amp; Ebel, Holger: World Wide Web scaling exponent from Simon's
 			1955
 			model, <em>Phys. Rev. E</em>, 64, 3, 035104, 2001.</div>
 		<div id="bib-Baeza2000">Baeza-Yates, Ricardo &amp; Navarro, Gonzalo: Block addressing indices for approximate
@@ -819,9 +820,10 @@
 				Reports</em>, 4,
 			5890, 2014.</div>
 		<div id="bib-Kauffman2000">Kauffman, Stuart A.: Investigations, Oxford University Press, 2000.</div>
-		<div id="bib-Frank1995">例えばFrank, S. A.: George Price’s contributions to Evolutionary Genetics: <em>J. Theor
+		<div id="bib-Frank1995">例えばFrank, S. A.: George Price's contributions to Evolutionary Genetics: <em>J. Theor
 				Biol</em>,
 			175, 3, pp.373-388, 1995.</div>
+		<div id="bib-population-dynamics">Malthus, Thomas Robert: An Essay on the Principle of Population, J. Johnson, London, 1798. </div>
 		<h2 id="footnote-section" class="nonum">脚注</h2>
 		<div id="footnote"> </div>
 	</div>
